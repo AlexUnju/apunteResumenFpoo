@@ -73,7 +73,8 @@ ejemplificación de los estados A y B de un problema:
 
 ![image](https://github.com/AlexUnju/apuntes_fpoo/assets/142057928/2c615719-7ba4-4fa4-97e9-4ca3c173e74e)
 
-## VIDEO YOUTUBE:
+##  VIDEO YOUTUBE <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"> <br>
+
 [![Texto alternativo](https://img.youtube.com/vi/ickYKg0MyCk/maxresdefault.jpg)](https://www.youtube.com/watch?v=ickYKg0MyCk)
 
 
