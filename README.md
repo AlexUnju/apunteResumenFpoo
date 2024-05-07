@@ -1,7 +1,9 @@
-###### _No olvides darle una estrellita a este repositorio :D_
-<img src="https://i.ibb.co/ryRMhP0/fpoo.png" alt="fpoo" border="0" height="300em"> <br>
+## Apuntes de Fundamentos de la Programación Orientado a Objetos
+###### _No olvides darle una estrellita a este repositorio :D  -_ <img src="https://i.ibb.co/0nX0bNR/Screenshot-2024-05-07-164050.png" alt="Screenshot-2024-05-07-164050" border="0" height="30em" align="center">
+<img src="https://i.ibb.co/ryRMhP0/fpoo.png" alt="fpoo" border="0" height="370em">
 
-## Apuntes de fundamentos de la programación orientado a objetos
-Problamente no tengas que estudiar de más con este resumen y apunte. 
+
+
+
 
 
