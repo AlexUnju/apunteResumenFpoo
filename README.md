@@ -73,7 +73,7 @@ ejemplificación de los estados A y B de un problema:
 
 ![image](https://github.com/AlexUnju/apuntes_fpoo/assets/142057928/2c615719-7ba4-4fa4-97e9-4ca3c173e74e)
 
-##  VIDEO YOUTUBE <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"> <br>
+##  VIDEO YOUTUBE PROBLEMA Y SOLUCION <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"> <br>
 
 [![Texto alternativo](https://img.youtube.com/vi/ickYKg0MyCk/maxresdefault.jpg)](https://www.youtube.com/watch?v=ickYKg0MyCk)
 
@@ -110,6 +110,111 @@ nos centraremos en dos: **Los lenguajes de bajo nivel y los lenguajes de alto ni
 El **lenguaje de bajo nivel** presenta ventajas como su sencillez, instrucciones directas y alta velocidad de ejecución. Sin embargo, está estrechamente ligado al hardware, lo que puede dificultar la estructuración de ciertos programas. Además, se requiere atención especial para evitar errores que puedan aumentar la carga de trabajo y revisión del código.
 #### ⬆️ Lenguaje de alto nivel
 Cuando hablamos de **lenguajes de alto nivel**, nos referimos a aquellos que se centran en las capacidades cognitivas humanas en lugar de en las capacidades de las máquinas. Estos lenguajes permiten a los programadores resolver problemas de manera sencilla y rápida, ofreciendo máxima flexibilidad y abstracción. Aunque generan un código más comprensible y válido para diversas plataformas, pueden ralentizar el procesamiento ya que la computadora necesita más tiempo para traducir las instrucciones. Además, algunos están limitados a ciertas plataformas. En general, para los productos de software que se desarrollarán, los algoritmos se escribirán en un lenguaje de alto nivel.
+
+##  VIDEO YOUTUBE PROGRAMACIÓN <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"> <br>
+[![Texto alternativo](https://img.youtube.com/vi/IUTNblDwOfE/maxresdefault.jpg)](https://www.youtube.com/watch?v=IUTNblDwOfE)
+
+### 📑 FASES EN RESOLUCION DE PROBLEMAS MEDIANTE ALGORITMOS
+
+El proceso de resolución de problemas con una computadora implica escribir y ejecutar un programa. Aunque es un proceso creativo, sigue una serie de fases comunes que deben seguir la mayoría de los programadores.
+
+### 📖 FASES EN LA RESOLUCIÓN DE PROBLEMAS CON COMPUTADORA
+Las fases de resolución de un problema con computadora son:
+- Análisis del problema.
+- Diseño del algoritmo.
+- Codificación.
+- Compilación y ejecución.
+- Verificación.
+- Depuración.
+- Mantenimiento.
+- Documentación.
+
+  **Las características principales de la resolución de problemas son:**
+
+1. **Análisis:** Se estudia el problema considerando los requisitos especificados por el cliente o la persona encargada del programa.
+2. **Diseño:** Se elabora una solución que conduzca a un algoritmo para resolver el problema.
+3. **Codificación (Implementación):** La solución se traduce a la sintaxis de un lenguaje de alto nivel (como Java, C#, Processing, etc.) para crear archivos de código fuente, que luego se traducen al lenguaje de la computadora.
+4. **Ejecución, Verificación y Depuración:** El programa se ejecuta, se verifica rigurosamente y se corrigen los errores ("bugs") que puedan surgir.
+6. **Mantenimiento:** El programa se actualiza y modifica según las necesidades de los usuarios.
+7. **Documentación:** Se documentan las diferentes fases del ciclo de vida del software, incluyendo análisis, diseño, codificación, así como manuales de usuario y de referencia, y normas para el mantenimiento.
+Las dos primeras fases llevan al diseño detallado en forma de algoritmo. Durante la tercera fase (codificación), se implementa este algoritmo en código. La compilación y ejecución traducen y ejecutan el programa. En las fases de verificación y depuración, se buscan y corrigen errores. Es fundamental invertir tiempo en análisis y diseño para reducir la necesidad de depuración. Por último, se documenta el programa.
+
+### ✍️ ALGORITMO Y METODOLOGÍA DE LA PROGRAMACIÓN
+
+Un algoritmo es un método para resolver un problema mediante una serie de pasos precisos,
+definidos y finitos. Estas últimas tres palabras, son además las características de un algoritmo:
+- **Preciso:** Indica el orden de realización de cada paso.
+- **Definido:** Si se sigue dos veces, obtiene el mismo resultado cada vez.
+- **Finito:** Tiene fin, un determinado número de pasos.Debe producir un resultado en un tiempo finito.
+
+Los métodos que utilizan algoritmos se llaman métodos algorítmicos, mientras que los métodos que implican juicio se denominan métodos heurísticos.
+El eje central de esta metodología es el concepto de algoritmo.
+![image](https://github.com/AlexUnju/apuntes_fpoo/assets/142057928/7d08362e-a0b7-4243-8c11-8627cdece737)
+
+
+Se consideran todos los elementos de un problema representado como un sistema informático:
+
+1. Los datos de entrada (la situación problemática) y los datos de salida (la solución) son esenciales para diseñar un algoritmo.
+
+2. El diseño de un algoritmo implica una secuencia ordenada de pasos sin ambigüedades que conducen al desarrollo del proceso o estrategia. Esto incluye tanto la fase de análisis del problema como la fase de diseño del algoritmo, donde se crea un modelo del programa que aún no ha sido codificado.
+
+3. A partir del diseño del algoritmo, se construye el programa en la fase de codificación o implementación.
+
+4. El programa, junto con la configuración del hardware y los documentos de desarrollo, constituyen el software del sistema informático. En este paso, el sistema puede ejecutarse, verificarse y depurarse, lo que corresponde a la fase de ejecución de la resolución de problemas mediante algoritmos.
+
+
+|   |
+|---|
+| Entonces, la idea central de la Metodología de la Programación es que para llegar a la realización de un programa es necesario el diseño previo de un algoritmo, de modo que sin algoritmo no puede existir un programa. |
+
+Los algoritmos son independientes del lenguaje de programación y la computadora. Pueden expresarse en diferentes lenguajes y ejecutarse en diferentes máquinas manteniendo su esencia. En la ciencia de la computación, los algoritmos son más importantes que los lenguajes de programación o las computadoras. Un lenguaje de programación es solo un medio para expresar un algoritmo, y una computadora es simplemente un procesador para ejecutarlo.
+
+### 🧠 ANÁLISIS DEL PROBLEMA
+
+El análisis del problema comprende dos etapas:
+
+1. **Definición:** Se establece el propósito del algoritmo y se define claramente lo que se desea resolver, junto con los objetivos de su solución.
+
+2. **Análisis:** Se identifican las características del problema en términos de entradas y salidas, y se investigan los procesos necesarios para resolverlo. Se selecciona el proceso más adecuado si hay varias opciones disponibles, o se desarrolla uno si no existen procesos previos.
+
+![image](https://github.com/AlexUnju/apuntes_fpoo/assets/142057928/f334e5fc-337c-497c-9817-e79a4f1811c9)
+
+**Ejemplo:** Se solicita desarrollar una calculadora que permita sumar dos números
+
+**Definición del Problema:** Desarrollar una calculadora que permita sumar dos números
+
+**Análisis:**
+- Datos de Entrada: Dos números, a los cuales denominaremos número A y número B
+- Proceso:
+-  - - ¿Quién debe realizar el proceso?: Una calculadora
+-  - - Cuál es el proceso que realiza la calculadora?
+              
+Donde lo que se ha aplicado es una ecuación matemática que la calculadora
+puede realizar. La variable dependiente suma almacena el resultado de sumar
+al número A, el número B.
+- - - Datos de Salida: suma
+
+### **📏 Consideraciones previas a la representación de un algoritmo**
+
+**Una variable** es un contenedor para almacenar información, compuesto por un identificador único y un tipo de datos que determina el rango de valores y operaciones aplicables. Los tipos de datos más comunes incluyen **Entero, Real o Flotante, Carácter, Cadena de caracteres o string, y Fecha.** 
+
+**La nomenclatura** del identificador sigue ciertas reglas comunes, como la unicidad y claridad del nombre, evitando el inicio con números y utilizando mayúsculas para separar palabras en nombres compuestos. Se sugiere evitar nombres excesivamente largos para facilitar la legibilidad. 
+
+Además, se establecen convenciones para nombres específicos, como **i, j, k para índices enteros**, **a, b, c para valores numéricos reales**, las variables llamadas **p y q se emplean para
+apuntadores**; las variables llamadas **n y m son variables que contienen valores de tamaños de matrices.**
+Los nombres de variables se escriben en minúsculas para facilitar la lectura.
+
+### 🎨 DISEÑO DEL ALGORITMO
+![image](https://github.com/AlexUnju/apuntes_fpoo/assets/142057928/7e83a87e-c4a6-466d-8c50-cc146e507da1)
+
+#### CONCLUSIÓN
+
+El diseño de algoritmos es crucial en la ciencia de la computación y se enfatiza en esta materia. Requiere creatividad y conocimiento técnico. Los algoritmos pueden representarse de diversas formas. Se recomienda tomarse tiempo para analizar y diseñar antes de codificar, lo que evita problemas en la implementación.
+
+
+
+
+
 
 
 
