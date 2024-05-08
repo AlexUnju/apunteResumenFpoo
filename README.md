@@ -214,6 +214,152 @@ El diseño de algoritmos es crucial en la ciencia de la computación y se enfati
 ##  VIDEO FASES EN RESOLUCIÓN DE UN ALGORITMO <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"><br>
 
 [![Texto alternativo](https://i.ytimg.com/vi/zXHAjyVmYEE/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhLIGUoOjAP&rs=AOn4CLCF5C2YNiaAYsIp4KSbog7pP8BWnA/maxresdefault.jpg)](https://www.youtube.com/watch?v=zXHAjyVmYEE)
+#
+# 🔵 SEMANA 02
+##
+### 🧮 EXPRESIÓN ARITMÉTICA
+Las expresiones son combinaciones de constantes, variables, operadores y paréntesis. En algoritmos, las expresiones algebraicas se traducen a expresiones aritméticas. Los operandos son las variables o constantes involucradas, mientras que los operadores realizan las operaciones entre ellos. El resultado de una expresión aritmética es numérico, ya sea entero o real, y el punto se usa como separador decimal . Por ejemplo, suponga que 𝑏 = 4.5
+
+
+### 📚 OPERADORES ARITMÉTICOS
+
+| Operador          | Descripción                      |
+|-------------------|----------------------------------|
+| +                 | Suma                             |
+| -                 | Resta                            |
+| *                 | Multiplicación                   |
+| /                 | División                         |
+| ** o ^            | Potenciación                     |
+| div               | División entera                  |
+| mod, %            | Módulo (resto)                   |
+
+Ejemplo:
+
+| Operación Matemática | Expresión Aritmética | Resultado |
+|----------------------|----------------------|-----------|
+| 5 + 3                | 5 + 3                | 8         |
+| 10 - 4               | 10 - 4               | 6         |
+| 2 x 6                | 2 * 6                | 12        |
+| $\frac{15}{3}$       | 15 / 3               | 5         |
+| $2^{3}$              | 2 ** 3               | 8         |
+| 13 ÷ 5               | 13 div 5             | 2         |
+| 13 mod 5             | 13 mod 5             | 3         |
+
+### ➖➖➕➕ OPERADORES DE INCREMENTO Y DECREMENTO
+
+Los operadores de incremento (++), que aumentan el valor de su operando en una unidad, y de decremento (--), que disminuyen el valor de su operando en una unidad, son comunes en muchos lenguajes de programación. Se pueden utilizar como prefijo (antes de la variable) o como sufijo (después de la variable), lo que afecta al valor resultante de la variable. Si se utiliza como prefijo, el operador cambia el valor de la variable y devuelve este nuevo valor; si se usa como sufijo, el resultado de la expresión es el valor de la variable, y luego se modifica esta variable.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/0c442d26-135d-4b28-8b56-3876693a43d0)
+
+### 📏 REGLAS DE PRIORIDAD
+
+Las reglas de prioridad en expresiones aritméticas determinan el orden de las operaciones. Estas reglas son:
+
+1. Se evalúan primero las operaciones encerradas entre paréntesis, priorizando las más internas.
+2. Las operaciones aritméticas siguen un orden de prioridad: primero los paréntesis, luego los operadores unitarios (++ y --), seguidos de multiplicación, división y módulo, y finalmente suma y resta.
+3. En lenguajes que admiten la operación de exponenciación, esta tiene la mayor prioridad.
+4. Si hay varios operadores de igual prioridad, se sigue la asociatividad de izquierda a derecha.
+
+Estas reglas garantizan un orden consistente en las operaciones.
+
+| Operador          | Descripción                      |
+|-------------------|----------------------------------|
+| +                 | Suma                             |
+| -                 | Resta                            |
+| *                 | Multiplicación                   |
+| /                 | División                         |
+| ** o ^            | Potenciación                     |
+| div               | División entera                  |
+| mod, %            | Módulo (resto)                   |
+| **++**            | **Incremento**                   |
+| **--**            | **Decremento**                   | 
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9b7b07c5-c938-45ee-bb23-62b33304c996)
+
+### 📚 BIFURCACIÓN
+Una bifurcación es una interrupción en el flujo normal de ejecución de un algoritmo, con lo cual
+la linealidad de ejecución se altera:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/a3f9ec2f-5f0a-4dda-a265-8f3480f31b12)
+
+Las bifurcaciones pueden ser, según el punto del algoritmo donde se aplique de dos tipos: hacia
+adelante o hacia atrás 
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/cdd06818-2797-4d73-a26d-6715be928712)
+
+### 📖 BIFURCACIÓN CONDICIONAL Y LAS EXPRESIONES LOGICAS
+
+Una bifurcación condicional depende del cumplimiento de una condición específica. En el esquema representado, la evaluación de la condición se muestra dentro de un rombo. Si la condición se cumple, el flujo de ejecución continúa por la acción F2; de lo contrario, se ejecuta la acción F1. Después de ejecutar las acciones, el flujo de ejecución continúa normalmente, como indican las flechas que se unen en el círculo. La evaluación de la condición devuelve un valor que indica si se cumple o no; por lo tanto, se necesita un tipo de datos capaz de almacenar estos valores, como VERDADERO o FALSO. 
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/2f974e7c-dc61-4269-89eb-7c6ae8c7267e)
+
+### 📑 EL TIPO DE DATOS BOOLEAN (O LÓGICO)
+
+El tipo de datos Boolean, también conocido como lógico, permite almacenar solo dos estados: verdadero o falso. Se define una variable de tipo Boolean de la siguiente manera: "variable: Boolean". Por ejemplo, una variable que indique si un jugador ha completado su misión en un juego se puede definir como "isMissionComplete: Boolean" o "haFinalizadoMision: Boolean". Este tipo de datos se utiliza comúnmente en inglés para los identificadores debido a su brevedad y claridad. Para asignar el valor verdadero a una variable booleana, se utiliza "verdadero", mientras que para asignar falso se utiliza "falso". Por ejemplo, para asignar verdadero a la variable "isMissionComplete", se escribiría "isMissionComplete ← verdadero"; y para asignar falso, se escribiría "isMissionComplete ← falso".
+
+### 🧮 LOS OPERADORES RELACIONALES
+
+Así como las expresiones aritméticas utilizan operadores aritméticos; las expresiones lógicas utilizan operadores relaciones y lógicos.
+
+Los operadores relacionales permiten realizar comparaciones de valores de tipo numérico o
+carácter. Los operadores de relación sirven para expresar las condiciones en los algoritmos y el resultado de la operación será verdadero o falso.
+
+| Operador | Significado       |
+|----------|-------------------|
+| <        | Menor que         |
+| >        | Mayor que         |
+| = o ==   | Igual que         |
+| <=       | Menor o igual que |
+| >=       | Mayor o igual que |
+| <> o !=  | Distinto de       |
+
+ejemplo:
+
+| numA | numB | Expresión Lógica | Resultado           |
+|------|------|------------------|---------------------|
+| 5    | 3    | 5 < 3            | Falso        |
+| 10   | 4    | 10 > 4           | Verdadero    |
+| 3    | 3    | 3 == 3           | Verdadero     |
+| 5    | 3    | 5 <= 3           | Falso      |
+| 8    | 8    | 8 >= 8           | Verdadero    |
+| 7    | 5    | 7 != 5           | Verdadero     |
+
+### 🧠 LOS OPERADORES LOGICOS
+
+Estos operadores generalmente se van a utilizan para realizar combinaciones de expresiones
+lógicas que usan operadores relacionales.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/b2909759-b2dd-4b25-a4f4-a3f302c86db2)
+
+Estos operadores trabajan sobre un resultado booleano. Es decir, evalúan una variable booleana
+o el resultado de una operación lógica basada en operadores relaciones y actúa en consecuencia
+según las denominadas tablas de verdad.
+
+####  Operador Lógico NO
+
+Al aplicar el operador no, lo que hace es negar (asignar el valor opuesto) de a. Por lo tanto, el
+resultado de no a, será falso.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/2a89462a-4cef-405e-9494-be942187b0ab)
+
+#### Operador Lógico Y (o conjunción)
+
+El operador Y toma los valores que devuelven las expresiones lógicas a y b; y evalúa el resultado
+en conjunto. 
+Así, si tanto a como b son verdaderas, el resultado en conjunto será verdadero, caso contrario
+devolverá falso
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9ca9620b-aa5b-43bf-bfb3-f3968d06564f)
+
+#### El Operador Lógico O (o disyunción)
+
+El operador O toma los valores que devuelven las expresiones lógicas a y b; y evalúa el resultado
+en conjunto.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/f1dd6f48-aaa1-44b3-846b-82d947932092)
+
+
+
 
 
 
