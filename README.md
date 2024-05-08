@@ -592,7 +592,7 @@ El centro de la programación creativa es el código creativo, donde el código 
 
 El centro de la programación creativa es el código creativo, el cual se define como
 
-          `𝑐ó𝑑𝑖𝑔𝑜 𝑐𝑟𝑒𝑎𝑡𝑖𝑣𝑜 = 𝑎𝑟𝑡𝑒 + 𝑐𝑖𝑒𝑛𝑐𝑖a`
+**`𝑐ó𝑑𝑖𝑔𝑜 𝑐𝑟𝑒𝑎𝑡𝑖𝑣𝑜 = 𝑎𝑟𝑡𝑒 + 𝑐𝑖𝑒𝑛𝑐𝑖a`**
 
 ### Combatir prejuicios:
 La programación creativa busca combatir prejuicios sobre las ciencias de la computación, promoviendo el "aprendizaje haciendo" a través de la construcción de bocetos de código creativo. Se desafía la idea de  que sostienen que las mismas son difíciles, aburridas y oscuras o solo para ciertos tipos de personas, y se fomenta la exploración creativa y el descubrimiento en el proceso de aprendizaje.
