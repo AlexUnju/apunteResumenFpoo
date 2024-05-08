@@ -618,4 +618,5 @@ conceptos es la primera referencia del juego para el
 equipo de desarrollo. En él detallamos la visión general del juego y nos permitirá tener una idea
 clara de los objetivos que queremos alcanzar.
 
+# 🟡 SEMANA 04
 
