@@ -335,14 +335,14 @@ Estos operadores trabajan sobre un resultado booleano. Es decir, evalúan una va
 o el resultado de una operación lógica basada en operadores relaciones y actúa en consecuencia
 según las denominadas tablas de verdad.
 
-####  Operador Lógico NO
+#### ! Operador Lógico NO
 
 Al aplicar el operador no, lo que hace es negar (asignar el valor opuesto) de a. Por lo tanto, el
 resultado de no a, será falso.
 
 ![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/2a89462a-4cef-405e-9494-be942187b0ab)
 
-#### Operador Lógico Y (o conjunción)
+#### && Operador Lógico Y (o conjunción)
 
 El operador Y toma los valores que devuelven las expresiones lógicas a y b; y evalúa el resultado
 en conjunto. 
@@ -351,20 +351,227 @@ devolverá falso
 
 ![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9ca9620b-aa5b-43bf-bfb3-f3968d06564f)
 
-#### El Operador Lógico O (o disyunción)
+#### || El Operador Lógico O (o disyunción)
 
 El operador O toma los valores que devuelven las expresiones lógicas a y b; y evalúa el resultado
 en conjunto.
 
 ![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/f1dd6f48-aaa1-44b3-846b-82d947932092)
+##
+
+# 🔴 SEMANA 03
+## Estructuras Selectivas
+
+Las estructuras de control iterativas permiten repetir una o varias acciones un número específico de veces. Dentro de estas estructuras, el bloque de código que se repite se conoce como bucle, y cada repetición se llama iteración.
+
+### 📚 CONCEPTOS
+- Estructura de control iterativa: es un tipo de estructura de control que permite repetir
+una o varias acciones (instrucciones o sentencias) un determinado número de veces.
+- Bucle: se indica con este nombre a la sección de código que se repite. Es decir, dentro
+de una estructura de control iterativa hay un bucle, por el cual luego de ejecutar su
+última instrucción saltará a la primera de cumplirse cierta condición.
+- Iteración: Cada repetición de un bucle se conoce como iteración.
+- 
+Al diseñar un bucle, es fundamental responder dos preguntas:
+1. ¿Qué acciones se repiten?
+2. ¿Cuántas veces se deben repetir?
+
+La primera pregunta determina si se necesita una estructura iterativa y qué acciones se repiten. La segunda pregunta implica asegurar que el número de iteraciones sea finito para evitar bucles infinitos. Es crucial tener un mecanismo que garantice la finalización del bucle.
+
+Por ejemplo, al calcular el factorial de 5 (5!), se realiza el producto de todos los números enteros del 1 al 5. Aquí, se ejecuta una operación un número finito de veces (5 veces) con una condición de parada clara.
 
 
+### 📚 ESTRUCTURA ITERATIVA MIENTRAS
+
+La estructura iterativa mientras (en inglés while) es aquella en la que el bucle se repite
+mientras se cumple una determinada condición. Cuando se ejecuta la instrucción mientras,
+la primera cosa que sucede es que se evalúa la condición (una expresión lógica o booleana).
+Si el resultado de la evaluación devuelve falso, no se ejecutará el bucle continuando la ejecución
+del algoritmo fuera de la estructura mientras (se dice que salta hacia afuera del
+fin_mientras). Si la expresión booleana retorna verdadero, entonces se ejecuta el bucle y
+al llegar al final de este se procederá a evaluar nuevamente la expresión booleana.
+Por lo tanto, las iteraciones se sucederán una tras otra mientras la expresión booleana
+(condición) siga retornando el valor verdadero. A continuación, se esquematiza la estructura de
+control iterativa mientras
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/234aabc0-04f3-4df0-8751-0437cd17d846)
+
+### 📑 UNA VARIABLE CON OBJETIVO ESPECÍFICO: EL CONTADOR
+
+Una variable con un propósito específico en estructuras de control iterativas es el contador. El contador se utiliza para rastrear el número de iteraciones en un bucle. Su función principal es mantener un registro del progreso del bucle, aumentando o disminuyendo su valor en cada iteración. Esto permite controlar el número de repeticiones y determinar cuándo detener el bucle. El contador es esencial para estructuras como los bucles for y while, donde su valor se actualiza en cada ciclo hasta que se alcanza una condición de salida específica.
+
+### 📚 ESTRUCTURA ITERATIVA HACER-MIENTRAS
+
+El bucle mientras evalúa la expresión al comienzo del bucle de repetición; siempre se utilizan
+para crear bucle pre-test. Los bucles pre-test se denominan también bucles controlados por la
+entrada. En numerosas ocasiones se necesita que el conjunto de sentencias que componen el
+cuerpo del bucle se ejecute al menos una vez sea cual sea el valor de la expresión o condición
+de evaluación. 
+
+Estos bucles se denominan bucles post-test o bucles controlados por la salida. Un caso típico es
+el bucle hacer-mientras (do-while).
+
+El bucle hacer-mientras es análogo al bucle mientras y el cuerpo del bucle se ejecuta
+una y otra vez mientras la condición (expresión booleana) sea verdadera. Existe, sin embargo,
+una gran diferencia y es que el cuerpo del bucle está encerrado entre las palabras reservadas
+hacer y mientras, de modo que las sentencias de dicho cuerpo se ejecutan, al menos una
+vez, antes de que se evalúe la expresión booleana. En otras palabras, el cuerpo del bucle siempre
+se ejecuta, al menos una vez, incluso aunque la expresión booleana sea falsa.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/31d19624-1db7-4183-b9d7-fab7777497bf)
+
+### 📚 ESTRUCTURA ITERATIVA PARA
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/1e79b484-2901-4e93-b6ec-08b16eb26f78)
+
+La estructura del bucle for comienza con un valor inicial (vi) de la variable de índice (v), y las acciones especificadas se ejecutan mientras el valor inicial sea menor o igual al valor final (vf).
+La variable de índice (vi) se incrementa en uno por defecto, o por un valor mayor según lo indicado por incr. Si este nuevo valor no excede el valor final (vf), las acciones se ejecutan nuevamente.
+Por lo tanto, las acciones dentro del bucle se repiten para cada valor de la variable de índice desde el valor inicial hasta el valor final, con el incremento indicado en incr.
+El incremento de la variable de índice suele ser 1 por defecto, pero puede ser diferente, positivo o negativo, según lo especificado.
+Normalmente, la variable de índice es de tipo entero y se suelen usar letras como i, j, k como nombres.
+El formato de la estructura del bucle for varía si se desea un incremento distinto a 1, ya sea positivo o negativo (decremento).
+
+## ⌨️ PROGRAMACIÓN CON PROCESSING
+
+### 📦 VARIABLES
+
+Las variables son elementos fundamentales en la computación y en la programación. Permiten almacenar valores durante la ejecución de un programa y pueden modificarse según sea necesario. Cada variable está asociada a un espacio físico en la memoria del ordenador, tiene un nombre único llamado identificador, y puede contener diferentes tipos de datos, como números, texto, o valores lógicos.
+El identificador de la variable, elegido por el programador, debe ser descriptivo y no puede coincidir con palabras reservadas del lenguaje de programación. Por otro lado, el valor almacenado en la variable debe ser definido previamente, es decir, se debe especificar qué tipo de dato contendrá la variable, como números enteros, decimales, texto, o valores lógicos.
+
+### 📚 TIPOS DE DATOS EN PROCESSING
+
+Processing ofrece varios tipos de datos para almacenar diferentes tipos de información. Estos se dividen en dos categorías principales: primitivos y tipos de referencia. En este momento, nos centraremos en los primitivos.
+
+1. **int**: Representa enteros de 32 bits con un rango desde -2.147.483.648 hasta 2.147.483.647.
+2. **float**: Almacena números con punto decimal, con un rango desde aproximadamente -3.4 × 10^38 hasta 3.4 × 10^38.
+3. **char**: Permite almacenar caracteres individuales, como letras o símbolos, en el formato Unicode.
+4. **boolean**: Solo puede almacenar dos valores: `TRUE` o `FALSE`, útil para controlar el flujo de los programas.
+5. **color**: Permite almacenar colores codificados en números hexadecimales.
+
+Estos tipos de datos son fundamentales para definir variables y realizar operaciones en programas de Processing. Cada tipo tiene un rango de valores específico y se utiliza según las necesidades del programa.
 
 
+### 📖 LAS VARIABLES PREDEFINIDAS (O DEL SISTEMA)
+
+Processing proporciona varias variables predefinidas que pueden ser utilizadas directamente en los programas sin necesidad de declararlas. Estas variables son útiles para obtener información sobre la ventana de trabajo, la interacción del usuario y otros aspectos del entorno de ejecución. Algunas de las variables predefinidas más importantes son:
+
+1. `width`: Almacena el ancho de la ventana de trabajo.
+2. `height`: Almacena el alto de la ventana de trabajo.
+3. `frameRate`: Guarda la velocidad de ejecución del programa.
+4. `frameCount`: Contiene el número de frames ejecutados desde el inicio del programa.
+5. `displayHeight`: Almacena el alto de la pantalla completa.
+6. `displayWidth`: Almacena el ancho de la pantalla completa.
+7. `key`: Contiene el valor de la tecla recientemente oprimida.
+8. `keyCode`: Detecta teclas especiales como flechas o teclas modificadoras.
+9. `keyPressed`: Es verdadero si alguna tecla está siendo oprimida.
+10. `mouseX`: La coordenada horizontal del mouse dentro de la ventana de trabajo.
+11. `mouseY`: La coordenada vertical del mouse dentro de la ventana de trabajo.
+12. `pmouseX`: La posición horizontal del mouse en el frame anterior.
+13. `pmouseY`: La posición vertical del mouse en el frame anterior.
+14. `mousePressed`: Indica si el botón del mouse está siendo oprimido.
+15. `mouseButton`: Detecta qué botón del mouse fue seleccionado.
+Estas variables simplifican el desarrollo de programas en Processing al proporcionar información relevante sobre la interacción del usuario y el entorno de ejecución.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9663e264-976d-4168-97e4-0ba2a9ec934f)
 
 
+### 📚 LAS ESTRUCTURAS DE CONTROL CONDICIONALES
 
+En Processing, las estructuras de control condicionales son herramientas fundamentales para dirigir el flujo de ejecución de un programa basado en condiciones específicas. Estas estructuras incluyen:
 
+1. **Estructuras Condicionales Simples:**
+   - Permiten tomar decisiones basadas en una única comparación.
+   - Se utilizan para ejecutar un bloque de código si una condición es verdadera.
+   - La sintaxis básica es:
+     ```java
+     if (condicion) {
+         // Bloque de código a ejecutar si la condición es verdadera
+     }
+     ```
+
+2. **Estructuras Condicionales Dobles:**
+   - Permiten elegir entre dos opciones basadas en el cumplimiento de una condición.
+   - Se ejecuta un bloque de código si la condición es verdadera y otro si es falsa.
+   - La sintaxis básica es:
+     ```java
+     if (condicion) {
+         // Bloque de código a ejecutar si la condición es verdadera
+     } else {
+         // Bloque de código a ejecutar si la condición es falsa
+     }
+     ```
+
+3. **Estructuras Condicionales Múltiples Anidadas:**
+   - Permiten evaluar una expresión contra múltiples resultados posibles.
+   - Se utilizan múltiples `else if` después de un `if` para evaluar varias condiciones.
+   - La estructura es:
+     ```java
+     if (condicion1) {
+         // Bloque de código a ejecutar si la condición1 es verdadera
+     } else if (condicion2) {
+         // Bloque de código a ejecutar si la condicion2 es verdadera
+     } else {
+         // Bloque de código a ejecutar si ninguna de las condiciones anteriores es verdadera
+     }
+     ```
+
+Además, en Processing se utilizan operadores lógicos como `&&` (AND) y `||` (OR) para realizar evaluaciones lógicas combinadas.
+
+### || && ! LOS OPERADORES LÓGICOS
+
+Los operadores lógicos permiten hacer una evaluación unificada, dado un conjunto de
+expresiones lógicas. Los operadores lógicos que ofrece Processing son:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/663e1579-896f-422e-9055-ac9864294e3a)
+
+- El &&: La conjunción es un operador que opera sobre dos valores de verdad.
+Típicamente los valores de verdad de dos condiciones, devolviendo el valor de verdad
+verdadero cuando ambas proposiciones son verdaderas, y falso en cualquier otro caso.
+Es decir que es verdadera cuando ambas son verdaderas. La tabla de verdad de la
+conjunción es la siguiente:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/bbfdcb3d-4eb9-4fbf-a830-31764724ddcb)
+
+- El ||: La disyunción es un operador que funciona sobre dos valores de verdad,
+típicamente los valores de verdad de dos condiciones, devolviendo el valor de verdadero
+cuando una de las proposiciones es verdadera, o cuando ambas lo son, y falso cuando
+ambas son falsas.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/3385b998-d52b-470e-889b-049526b5a881)
+
+### 📖 FUNCIÓN RANDOM
+
+La función random() se refiere al proceso de aleatoriedad. Este término se asocia a todo proceso
+cuyo resultado no es previsible más que por azar. El resultado de todo suceso aleatorio no puede
+determinarse en ningún caso antes de que este se produzca. En computación, la función
+random() es capaz de generar un número flotante aleatorio dado un rango de valores
+proporcionado. 
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9ca3a43a-d808-4c5f-98ec-4f71cbec2279)
+
+### 🔁 ESTRUCTURA DE CONTROL ITERATIVAS
+
+En cuanto a las estructuras de control iterativas, existen dos principales en Processing:
+
+1. **La Instrucción `while`:**
+   - Permite repetir un bloque de código mientras se cumpla una condición.
+   - La estructura básica es:
+     ```java
+     while (condicion) {
+         // Bloque de código a repetir mientras la condición sea verdadera
+     }
+     ```
+
+2. **La Instrucción `for`:**
+   - Se utiliza cuando se conoce de antemano el número de veces que se debe repetir un bloque de código.
+   - La estructura básica es:
+     ```java
+     for (inicialización; condición; actualización) {
+         // Bloque de código a ejecutar mientras se cumpla la condición
+     }
+     ```
+
+Estas estructuras de control son esenciales para dirigir el flujo de ejecución de un programa y tomar decisiones basadas en condiciones específicas. También facilitan la repetición de bloques de código, lo que permite una programación más eficiente y estructurada.
 
 
 
