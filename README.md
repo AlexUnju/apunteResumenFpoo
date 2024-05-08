@@ -573,5 +573,49 @@ En cuanto a las estructuras de control iterativas, existen dos principales en Pr
 
 Estas estructuras de control son esenciales para dirigir el flujo de ejecución de un programa y tomar decisiones basadas en condiciones específicas. También facilitan la repetición de bloques de código, lo que permite una programación más eficiente y estructurada.
 
+##PROGRAMACIÓN CREATIVA
+
+El avance de las tecnologías digitales ha impactado en el desarrollo personal y profesional, incluyendo a los artistas y diseñadores. La integración de la programación y el arte es esencial en el diseño de videojuegos, y aprender programación usando herramientas creadas por diseñadores puede ser beneficioso.
+
+### 🧠 La programación creativa:
+La programación creativa es un movimiento que establece que los lenguajes de programación
+se conciben como medios creativos, a la altura de la música, la danza o la pintura.
+En este enfoque los lenguajes de programación son considerados un nuevo estándar
+internacional para crear aplicaciones en cualquier parte del mundo y para cualquier parte del
+mundo. Esto se torna mucho más visible en el mundo del desarrollo de videojuegos, donde se
+mezcla el arte y la programación para crear expresiones de sensaciones. Los videojuegos son un
+medio para transmitir sensaciones por medio de la inmersión (la experiencia cierta de poder
+expresarse dentro de un mundo ficticio).
+
+### ✍️ El código creativo:
+El centro de la programación creativa es el código creativo, donde el código de la computadora se trata como un medio creativo natural. La forma en que se resuelve un problema es tan importante como la solución en sí misma. La programación creativa utiliza bases de matemáticas, física, computación y teoría artística para encontrar soluciones interesantes y novedosas.
+
+El centro de la programación creativa es el código creativo, el cual se define como
+```
+          𝑐ó𝑑𝑖𝑔𝑜 𝑐𝑟𝑒𝑎𝑡𝑖𝑣𝑜 = 𝑎𝑟𝑡𝑒 + 𝑐𝑖𝑒𝑛𝑐𝑖a
+```
+
+### Combatir prejuicios:
+La programación creativa busca combatir prejuicios sobre las ciencias de la computación, promoviendo el "aprendizaje haciendo" a través de la construcción de bocetos de código creativo. Se desafía la idea de  que sostienen que las mismas son difíciles, aburridas y oscuras o solo para ciertos tipos de personas, y se fomenta la exploración creativa y el descubrimiento en el proceso de aprendizaje.
+
+### 📚 QUE ES PROCESSING
+
+**Es un entorno de programación open source (código abierto) basado en el lenguaje de programación Java para gente creativa. La premisa es que no es necesario que estas personas**
+
+### 💡ENFOQUE PEDAGÓGICO CON PROCESSING
+
+Processing fue creado para enseñar los fundamentos
+de la programación computacional dentro de un
+contexto visual para servir como software de bocetos
+y ser usado como herramienta de producción.
+
+El modelo de bocetos de la herramienta es totalmente
+compatible con el modelo de conceptos que se utiliza
+para diseñar videojuegos; por lo cual resulta apropiado
+para la enseñanza de los principios básicos de la
+programación. Y es que resulta que el documento de
+conceptos es la primera referencia del juego para el
+equipo de desarrollo. En él detallamos la visión general del juego y nos permitirá tener una idea
+clara de los objetivos que queremos alcanzar.
 
 
