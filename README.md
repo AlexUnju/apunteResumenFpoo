@@ -794,5 +794,132 @@ del mismo objeto). El concepto de interfaz también se aplica a los atributos, e
 no se especifica una interfaz para un atributo, el mismo no podrá estar disponible para
 otros objetos.
 
+## LA ABSTRACCIÓN DE LAS CLASES 
+
+**Introducción a la abstracción en el paradigma orientado a objetos**
+
+La abstracción, piedra angular del paradigma orientado a objetos, es un proceso crucial para identificar las características esenciales y los comportamientos comunes de una parte de la realidad. Este proceso permite definir las entidades que representan el sistema estudiado y es fundamental en el análisis y diseño orientado a objetos, ya que facilita la determinación de las clases que modelan el problema a resolver.
+
+### **La importancia de la clase como entidad fundamental**
+
+La clase, entendida como una entidad que describe un conjunto de objetos con estructura y comportamiento similares, es un concepto central en la programación orientada a objetos. Se asemeja a un "molde" del cual se pueden crear múltiples objetos del sistema informático. Esta analogía con los moldes para hornear ilustra cómo las clases permiten obtener objetos con características específicas.
+
+### **Principio de abstracción: distinción, focalización y clasificación**
+
+El principio de abstracción en el paradigma orientado a objetos se basa en tres premisas fundamentales: distinguir diferentes objetos, focalizarse en las características y operaciones esenciales de esos objetos, y clasificar los objetos en base a sus características y operaciones comunes en clases. Este principio refleja un proceso natural que todos aplicamos en nuestra vida cotidiana al diferenciar entre diversos tipos de objetos y enfocarnos en sus propiedades esenciales.
+
+**Aplicación del principio de abstracción en situaciones cotidianas**
+
+Desde la infancia, aprendemos a clasificar objetos y a distinguir entre ellos. Ya sea diferenciando entre seres vivos y objetos inanimados o identificando herramientas y juguetes, ejercemos la capacidad de abstracción de manera intuitiva. Además, en nuestras actividades diarias, como practicar un deporte, aplicamos la abstracción al centrarnos en las propiedades esenciales comunes de los objetos involucrados, como compañeros de equipo, pelotas y objetivos del juego.
+
+**Importancia de la abstracción en el desarrollo de videojuegos**
+
+La abstracción juega un papel crucial en el desarrollo de videojuegos. Cada elemento de un juego, desde personajes hasta objetos y entornos, se representa mediante clases que definen su estructura y comportamiento. Estas clases son la base para la creación de los GameObjects, que son los objetos individuales en el juego.
+
+**Ejemplo práctico: identificación de clases en una pantalla de juego**
+
+En una pantalla de juego, cada elemento visible está respaldado por clases que representan su funcionalidad y apariencia. Al identificar estas clases junto con sus atributos y operaciones, podemos entender cómo se generan los GameObjects y cómo interactúan en el juego.
+
+### **Modelado de la abstracción: Introducción al Diagrama de Clases en UML**
+
+El modelado de la abstracción de objetos se lleva a cabo mediante el uso de diagramas estandarizados, siendo el Diagrama de Clases de UML (Unified Modeling Language) uno de los más prominentes. Este diagrama es fundamental para especificar la estructura de datos de un sistema de información en el ámbito del modelado orientado a objetos.
+
+### 👪 **Familias de Diagramas en UML**
+
+UML ofrece dos grandes familias de diagramas: los diagramas de estructuras y los diagramas de comportamiento. Los primeros se centran en la arquitectura de datos del sistema, mientras que los segundos se enfocan en especificar su comportamiento.
+
+### 🗃️ **Diagramas de Clase: Aspectos Generales**
+
+El Diagrama de Clases es esencial en UML, ya que se utiliza principalmente para definir la estructura de datos de un sistema. Este diagrama constituye la base de cualquier solución en el modelado orientado a objetos, ya que incluye el conjunto de clases que conforman la estructura básica del sistema y distribuye los datos que maneja a través de sus atributos.
+
+Análogamente al cuerpo humano, donde las clases y sus atributos representan el esqueleto del sistema, el Diagrama de Clases también permite definir los "músculos" que permiten la movilidad del sistema, es decir, las operaciones y relaciones entre clases que determinan su funcionamiento.
+
+### 📖 **Representación de Clases en UML**
+
+En un Diagrama de Clases, una clase se representa como una caja que puede dividirse en una, dos o tres partes. La primera parte siempre indica el nombre de la clase. Si la clase se divide en tres secciones, la segunda parte corresponde a los atributos y la tercera a las operaciones. En caso de que la clase solo tenga dos secciones, la segunda puede referirse tanto a los atributos como a las operaciones.
+
+**Ejemplo Práctico: Clase Avión en UML**
+
+Para ilustrar este concepto, consideremos la clase Avión. En el diagrama, se representa explícitamente las tres partes de la clase: nombre (Avión), atributos (modelo, cantidad de motores, velocidad y capacidad) y operaciones (acelerar y girar en una dirección). Este ejemplo muestra cómo se modela una clase en UML y cómo se pueden definir objetos a partir de ella.
 
 
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/c28c85d4-6b14-4101-a3a3-c4c860ec2e6d)
+
+
+**En conclusión, el Diagrama de Clases en UML es una herramienta fundamental para el modelado de la abstracción en la programación orientada a objetos, permitiendo representar la estructura de datos de un sistema y definir sus relaciones y comportamientos de manera clara y concisa.**
+
+### 📏📏 **Nomenclatura para la Definición de Nombres de Clases**
+
+1. Los nombres de las clases deben ser sustantivos en singular.
+2. La primera letra del nombre debe comenzar en mayúscula, seguida de letras minúsculas.
+3. No se permiten espacios en los nombres. Durante la fase de análisis en UML, se puede usar guion bajo (_) para separar palabras en el nombre de la clase. Sin embargo, durante la fase de diseño, es una práctica común que la primera letra de cada palabra subsecuente esté en mayúscula. Esta última recomendación se aplicará en todos los diagramas de clases realizados en la asignatura.
+
+**Características Avanzadas de una Clase: Visibilidad**
+
+Además de los elementos básicos como el nombre, atributos y operaciones, una clase también cuenta con propiedades avanzadas que permiten especificar aspectos más detallados de la clase modelada. Entre estas propiedades, la visibilidad es fundamental, ya que determina el acceso que otras clases tendrán a los atributos y operaciones de la clase.
+
+**Definición de Visibilidad**
+
+La visibilidad establece la disponibilidad que ofrece una clase a otras clases en cuanto al uso o acceso de sus atributos y operaciones. Se puede especificar si un atributo u operación está totalmente disponible para otras clases, o si está restringido y no disponible para ninguna otra clase. Además, existen niveles intermedios de visibilidad que pueden variar según el lenguaje de programación utilizado.
+
+### 🎚️ **Niveles de Visibilidad en UML**
+
+En UML, se definen cuatro niveles de visibilidad:
+
+1. **Público (+)**: La visibilidad se extiende a otras clases, lo que significa que cualquier clase puede acceder a ese atributo u operación.
+
+2. **Protegido (#)**: La visibilidad se extiende únicamente a las subclases de la clase original. Esto se profundizará más adelante cuando se aborde el concepto de herencia.
+
+3. **Privado (-)**: En este nivel, solo la clase original puede acceder a los atributos y operaciones privadas.
+
+4. **Paquete (~)**: Introducido en UML 2.5 para reflejar prácticas de algunos lenguajes de programación. La visibilidad se extiende a las clases que comparten el mismo paquete en el que se ha definido la clase original. Fuera de este paquete, otras clases no pueden acceder al atributo u operación a menos que sean subclases.
+
+
+### 📒 **Definición de Atributos en UML**
+
+La definición de un atributo en UML implica considerar varios aspectos para una descripción completa y precisa. Un atributo representa una característica específica de un objeto y es, en esencia, una variable que almacena un valor. Para una representación adecuada en UML, es esencial comprender los tipos de datos predefinidos que ofrece UML y cómo se aplican en la definición de atributos. A continuación, se presentan los tipos de datos predefinidos en UML, junto con ejemplos de su uso:
+
+1. **Boolean**: Indica un valor lógico que puede ser verdadero o falso. Ejemplo: `isFinishedTime: boolean`
+
+2. **Byte**: Representa un tipo numérico para enteros con un rango limitado, generalmente entre -128 y 127. Ejemplo: `cantidadVidas: byte`
+
+3. **Short**: Indica un tipo numérico para enteros con un rango más amplio que Byte. Ejemplo: `puntajeBonus: short`
+
+4. **Integer**: Representa un tipo numérico para enteros con rangos muy grandes. Ejemplo: `puntajeAcumulado: integer`
+
+5. **Long**: Indica un tipo numérico para enteros mucho más grandes que Integer, típicamente utilizado en cálculos científicos. Ejemplo: `distanciaAsaturno: long`
+
+6. **Float**: Representa un tipo numérico para números reales, útil para aplicaciones de videojuegos que manipulan decimales. Ejemplo: `resultadoOperacion: float`
+
+7. **Double**: Indica un tipo numérico para números reales muy grandes, comúnmente utilizado en cálculos científicos. Ejemplo: `derivada: double`
+
+8. **Date**: Representa un tipo para valores que representan fechas. Ejemplo: `fecNac: date`
+
+9. **String**: Indica un tipo que representa cadenas de caracteres, útiles para almacenar texto. Ejemplo: `Nacionalidad: string`
+
+10. **Char**: Representa un único carácter. Ejemplo: `teclaSeleccionada: char`
+
+Al definir atributos en UML, es esencial considerar el tipo de dato adecuado para cada característica del objeto que se está modelando, garantizando así una representación precisa y coherente del sistema.
+
+### 📐 **Nomenclatura para la Definición de Atributos**
+
+La nomenclatura adoptada para la definición de atributos en esta materia sigue las convenciones del lenguaje de programación Java. A continuación, se describen las reglas que se aplicarán:
+
+1. Los atributos deben iniciar con una letra minúscula.
+2. No pueden comenzar con un número.
+3. El nombre del atributo debe reflejar claramente el significado de la característica que representa en la clase. Por ejemplo, para una clase `NaveEspacial` que tiene un atributo que indica la cantidad de vidas, un nombre válido para el atributo sería `cantVidas`, mientras que nombres como `v` o `cv` serían inválidos.
+4. No se permiten espacios en los nombres de los atributos. En la fase de análisis del Diagrama de Clases, se admite el uso de guion bajo (_), pero en la fase de diseño se seguirá la convención de que la primera letra de cada palabra subsiguiente esté en mayúscula.
+
+## 📚 **Definición de Operaciones**
+
+Las operaciones representan acciones que pueden ser realizadas por los objetos creados a partir de una clase. La nomenclatura para la definición de operaciones en esta materia sigue las convenciones del lenguaje Java:
+
+1. Las operaciones deben ser verbos en infinitivo.
+2. Se escriben en minúscula.
+3. No se admiten espacios en los nombres de las operaciones. En la fase de análisis del Diagrama de Clases, se admite el uso de guion bajo (_), pero en la fase de diseño se seguirá la convención de que la primera letra de cada palabra subsiguiente esté en mayúscula.
+
+En un diagrama de clases, las operaciones se definen siguiendo la sintaxis:
+
+\[visibilidad\] nombre ([lista de parámetros])[:tipo de retorno]
+
+Los corchetes indican que estos elementos son opcionales, por lo que solo el nombre de la operación es requerido.
