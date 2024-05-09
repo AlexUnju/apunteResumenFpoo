@@ -619,4 +619,180 @@ clara de los objetivos que queremos alcanzar.
 ## 
 
 # 🟡 SEMANA 04
+## 🧠 CONCEPTO PARADIGMA
+El estadounidense **Thomas Kuhn**, los define como:
+
+**`La serie de prácticas que trazan los lineamientos de una disciplina científica a lo largo de un cierto lapso temporal. El éxito de un paradigma es consecuencia de su efectividad para resolver algún problema.`**
+
+Las prácticas hacen referencia a:
+
+- **Las leyes establecidas y los supuestos teóricos.** Por ejemplo, las leyes de movimiento
+de Newton forman parte del paradigma newtoniano y las ecuaciones de Maxwell
+forman parte del paradigma que constituye la teoría electromagnética clásica.
+
+- **El instrumental y las técnicas instrumentales** necesarias para hacer que las leyes del
+paradigma se refieran al mundo real. La aplicación en astronomía del paradigma
+newtoniano requiere el uso de diversos telescopios, junto con técnicas para su
+utilización y diversas técnicas para corregir los datos recopilados.
+
+- **Los principios generales propios** del paradigma que guían el trabajo dentro del
+paradigma. Por ejemplo, para construir una un puente, se deben seguir ciertos pasos,
+medidas y métodos preestablecidos para garantizar que el trabajo se realice de manera
+correcta.
+
+Respecto del **lapso temporal**, se hace referencia a que los paradigmas son el resultado de un proceso social en el que un grupo de individuos desarrolla nuevas ideas y establece principios y prácticas en torno a esas ideas. Se destaca que un paradigma puede ser efectivo para explicar ciertos aspectos del mundo, pero puede ser inaplicable u obsoleto para otros fenómenos, lo que sugiere la posible existencia de otros paradigmas más adecuados. Este fenómeno se interpreta como una consecuencia natural del proceso de evolución o maduración del concepto. Se ilustra este punto con un ejemplo en la programación de videojuegos, donde se plantea que pueden existir múltiples paradigmas aplicables y que algunos pueden ser más adecuados que otros para diferentes tipos de problemas.
+
+En las ciencias sociales, un paradigma se utiliza
+para explicar la forma en que se entiende el
+mundo. Se emplea para mencionar a todas
+aquellas experiencias, creencias, vivencias y
+valores que repercuten y condicionan el modo en
+que una persona ve la realidad y actúa en función
+de ello.
+
+De esta manera para brindar una definición formal, se considera paradigma a:
+- Los marcos de referencia que imponen reglas sobre cómo se deben hacer las cosas,
+indican qué es válido dentro del paradigma y qué está fuera de sus límites. Un paradigma
+distinto implica nuevas reglas, elementos, límites y maneras de pensar, o sea implica un
+cambio.
+- Patrones de pensamiento para la resolución de problemas. Un modelo o esquema
+fundamental que organiza nuestras opiniones con respecto a algún tema en particular.
+Los paradigmas establecen límites adoptados por los miembros de una comunidad
+científica para resolver problemas sustentados por los principios, leyes, supuestos
+teóricos y técnicas que la conforman.
+
+### 🗃️ ELEMENTOS DE LOS PARADIGMAS
+Sin entrar en detalles, los paradigmas se sustentan en teorías, creencias, valores, leyes, técnicas
+e hipótesis. Debido a esta formalidad, este último esquema intenta diferenciar conceptos que
+normalmente son confundidos con paradigmas
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/84463e50-2918-4da4-9384-4b840e39168e)
+
+### 📚 PARADIGMAS DE PROGRAMACIÓN
+
+Existen diferentes concepciones para los paradigmas de programación:
+
+- **Un proceso de diseño que va más allá de una
+gramática, reglas semánticas y algoritmos.** Es un
+conjunto de métodos sistemáticos aplicables en
+todos los niveles del diseño de programas.
+Representan un enfoque particular o filosofía
+para la construcción del software.
+
+- **Son propuestas tecnológicas adoptadas por la
+comunidad de desarrolladores que se enfocan a
+resolver uno o varios problemas definidos y
+delimitados.**
+
+- **Es un modelo básico de diseño y desarrollo de programas, que permite producir
+programas con unas directrices específicas**, tales como: estructura modular, fuerte
+cohesión, alta rentabilidad, etc.
+
+- **Es una colección de modelos conceptuales que en conjunto modelan el proceso de
+diseño y determinan la estructura de un programa.** Esa estructura conceptual de
+modelos está pensada de forma que los modelos determinan la forma correcta de los
+programas y controlan el modo en que el desarrollador piensa y formula soluciones, que
+luego son implementadas en un lenguaje de programación.
+
+- **Provee y determina la visión y métodos de un programador en la construcción de un
+programa o subprograma.** Diferentes paradigmas resultan en diferentes estilos de
+programación y en diferentes formas de pensar la solución de problemas (con la
+solución de múltiples “problemas” se construye una aplicación o producto de software).
+
+Existen tres cuestiones para tener en cuenta respecto de los paradigmas de programación:
+
+1. Ningún paradigma es mejor que otro, sino que cada uno tiene ventajas y desventajas.
+También hay situaciones donde un paradigma resulta más apropiado que otro.
+2. Para que las características esenciales del paradigma sean efectivamente aplicadas, las
+características del lenguaje de programación utilizado para implementar la aplicación
+deben reflejar adecuadamente los modelos conceptuales de ese paradigma. Cuando un
+lenguaje refleja bien un paradigma particular, se dice que soporta el paradigma, y en la
+práctica un lenguaje que soporta correctamente un paradigma, es difícil distinguirlo del
+propio paradigma.
+3. Los lenguajes de programación están basados en uno o más paradigmas, por ejemplo:
+Processing está basado en el paradigma orientado a objetos. El lenguaje de
+programación Scheme, en cambio, soporta solo programación funcional. Otros
+lenguajes, como C++ y Python soportan múltiples paradigmas.
+
+### 😃 EL PARADIGMA ORIENTADO A OBJETOS DE MANERA RESUMIDA
+
+El paradigma de programación orientada a objetos, que se fundamenta en la idea de representar problemas y soluciones de manera similar al procesamiento de información del cerebro humano. En este paradigma, los problemas y soluciones se representan como entidades llamadas objetos, que poseen atributos almacenados en variables especiales y operaciones que actúan sobre esos atributos mediante algoritmos específicos.
+
+Los objetos se comunican entre sí a través de mensajes, estableciendo relaciones según un conjunto de reglas y normas definidas en el protocolo de mensajes. Este paradigma se sustenta en cuatro pilares:** abstracción, encapsulación, herencia y polimorfismo.** Estos pilares estructuran la creación, uso y destrucción de objetos mediante clases, y establecen un contrato entre clases para la implementación de operaciones. Además, definen formalmente qué es un objeto, cómo se modelan y cómo se optimiza la reusabilidad y mantenimiento del código.
+
+### ✍️ EL MODELADO Y LA ABSTRACCIÓN EN EL PARADIGMA ORIENTADO A OBJETOS
+
+El modelado es una técnica que consiste en
+representar información mediante un modelo. Un
+modelo es una abstracción de una realidad. El
+término abstracción hace referencia al proceso de
+centrarse únicamente en los detalles relevantes del
+fenómeno estudiado o que es objeto de
+observación.
+La abstracción es también, una de las propiedades del paradigma orientado a objetos; esto
+significa que el paradigma orientado a objetos buscará a través de esta propiedad:
+
+- Abstraer un problema (determinar los aspectos relevantes del problema resolver) para
+luego realizar una,
+- abstracción de la solución de ese problema (determinar los aspectos relevantes de la
+solución que se propone como solución al problema) y finalmente
+- construir una abstracción del sistema informático creado. Esto significa que los aspectos
+relevantes del producto sean programados, probados y documentados en la forma de
+clases y sus interrelaciones, para que otros desarrolladores puedan interpretarlos.
+
+### 🧠 CARACTERISTICAS DEL MODELADO
+El modelado ofrece 4 características esenciales:
+
+1) Una visualización de un sistema: tanto del
+problema a solucionar como de la solución. En
+ambos casos estamos refiriéndonos a una
+aproximación (en el primer caso una
+aproximación de los objetos de nuestro juego y
+como ellos interactúan, mientras que del
+segundo caso un esquema y documentación del software del videojuego)
+2) Una especificación de su comportamiento: nos permite indicar detalladamente como
+actúa el mismo ante diferentes situaciones.
+3) Una plantilla que guíe a los desarrolladores durante su construcción: es decir son los
+“planos” que el arquitecto del software sigue para construir el producto.
+4) Documentar decisiones de diseño: siempre las decisiones de diseño deben estar bien
+documentadas y justificadas. En algunas metodologías la documentación se dejaba al
+último; o como sucede de forma muy habitual está la tentación de no documentar por
+el tiempo que incurre. Los modelos permiten minimizar el tiempo de documentación. 
+
+### 🧠🧠 LOS ELEMENTOS CENTRALES DE LA ABSTRACCIÓN DE OBJETOS
+
+El modelo orientado a objetos permite construir una representación para analizar, describir,
+explicar simular o predecir un fenómeno y se sustenta alrededor de las siguientes definiciones:
+- **Clase:** modelo, molde, plano o maqueta a partir del cual se pueden generar objetos. Las
+clases son entidades utilizadas para analizar el problema y diseñar la solución. Toda clase
+posee 3 elementos importantes: el nombre de la clase, los atributos y las operaciones. Mediante las clases se pueden determinar los actores (clases) que participan en el
+problema estudiado (o en la solución) así como las características y acciones que estas
+entidades poseen y que contribuyen de alguna manera para que se cumplan los
+objetivos abordados por la solución planteada (los requisitos). Las clases son
+programadas en un lenguaje de programación orientado a objetos.
+
+- **Objeto**: Los programas se ejecutan en memoria, adoptando el nombre de procesos. En
+el caso de los programas orientados a objetos estos procesos se denominan objetos que
+adquieren los atributos y operaciones de la clase a partir de la cual se ha creado, de esta
+manera en memoria pueden existir muchos objetos generados a partir de la misma clase
+pero cada una con su propia identidad que la separa de las demás (esto puede
+asemejarse al hecho de que a partir de un mismo plano se pueden construir varias
+viviendas, todas iguales por las especificaciones del plano pero en definitiva cada una
+es una construcción individual)
+- **Relaciones:** Indica la forma en que los objetos colaboran entre ellos para realizar alguna
+tarea específica. Esto genera un nuevo concepto que es el mensaje: es el mecanismo
+por el cual un objeto en memoria solicita a otro que ejecute una operación. Entonces
+las relaciones indican la forma en que los objetos envían mensajes a otros objetos.
+- **Interfaz:** Las operaciones de un objeto que pueden ser solicitadas por otro objeto se
+denominan servicios. Para que los servicios de un objeto puedan ser invocados por otro
+objeto; el objeto que desea ponerlos a disposición de los otros objetos debe definir una
+interfaz. La interfaz es simplemente un mecanismo por el cual se determina si una
+operación se halla disponible para ser invocada por otro objeto (las operaciones dentro
+del objeto siempre son servicios para las otras operaciones del mismo objeto, esto es,
+las operaciones de un objeto siempre pueden ser invocadas por las otras operaciones
+del mismo objeto). El concepto de interfaz también se aplica a los atributos, esto es; si
+no se especifica una interfaz para un atributo, el mismo no podrá estar disponible para
+otros objetos.
+
+
 
