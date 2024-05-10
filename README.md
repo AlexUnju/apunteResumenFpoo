@@ -113,7 +113,7 @@ Cuando hablamos de **lenguajes de alto nivel**, nos referimos a aquellos que se 
 
 ##  VIDEO YOUTUBE PROGRAMACIÓN <img src="https://i.ibb.co/0Y8QBHD/yt.png" alt="yt" border="0" height="20"> <br>
 [![Texto alternativo](https://img.youtube.com/vi/IUTNblDwOfE/maxresdefault.jpg)](https://www.youtube.com/watch?v=IUTNblDwOfE)
-
+ 
 ### 📑 FASES EN RESOLUCION DE PROBLEMAS MEDIANTE ALGORITMOS
 
 El proceso de resolución de problemas con una computadora implica escribir y ejecutar un programa. Aunque es un proceso creativo, sigue una serie de fases comunes que deben seguir la mayoría de los programadores.
