@@ -668,7 +668,20 @@ normalmente son confundidos con paradigmas
 
 ![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/84463e50-2918-4da4-9384-4b840e39168e)
 
+
+
 ### 📚 PARADIGMAS DE PROGRAMACIÓN
+## 📚📚 Caracteristicas de PARADIGMAS: 
+
+`**1ra Característica de paradigma:** Los objetos son contenedores de la
+información y la funcionalidad que se pueden programar.`
+
+`**2da Característica del Paradigma:** Los objetos interactúan, colaborando
+para que el programa cumpla su objetivo.`
+
+ `**3ra Característica del Paradigma:** Los
+objetos se crean a partir de clases.`
+
 
 Existen diferentes concepciones para los paradigmas de programación:
 
