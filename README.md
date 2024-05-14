@@ -360,7 +360,7 @@ en conjunto.
 ##
 
 # 🔴 SEMANA 03
-## Estructuras Selectivas
+## Estructuras Iterativas
 
 Las estructuras de control iterativas permiten repetir una o varias acciones un número específico de veces. Dentro de estas estructuras, el bloque de código que se repite se conoce como bucle, y cada repetición se llama iteración.
 
