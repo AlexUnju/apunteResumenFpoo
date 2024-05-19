@@ -1165,7 +1165,7 @@ gráficamente la relación que existe entre estas tres asociaciones con la sigui
 la agregación y la composición son subconjuntos de asociación, lo que significa que son casos
 específicos de asociación:
 
-### La dependencia
+## La dependencia
 
 Se lo suele definir como una **“asociación de uso”**. Esto significa que expresa una situación donde
 **una clase A utiliza otra clase B, y donde un cambio en la especificación de B puede afectar a A,
