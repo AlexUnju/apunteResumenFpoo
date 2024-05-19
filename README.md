@@ -264,15 +264,20 @@ Estas reglas garantizan un orden consistente en las operaciones.
 
 | Operador          | Descripción                      |
 |-------------------|----------------------------------|
+| ()                | Parentesis                      |
+| ++                | Incremento                      |
+| --                | Decremento                      |
+| *                 | Multiplicación ó producto        |
+| /                 | División                         |
+| %                 | Módulo                           |
 | +                 | Suma                             |
 | -                 | Resta                            |
-| *                 | Multiplicación                   |
-| /                 | División                         |
-| ** o ^            | Potenciación                     |
-| div               | División entera                  |
-| mod, %            | Módulo (resto)                   |
-| **++**            | **Incremento**                   |
-| **--**            | **Decremento**                   | 
+
+recordar el orden de prioridad son:
+- ()
+- ++, --
+- *, /, %
+- +, -
 
 ![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/9b7b07c5-c938-45ee-bb23-62b33304c996)
 
