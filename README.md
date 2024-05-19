@@ -1335,7 +1335,7 @@ para lo cual recibe como parámetro el número y el exponente, devolviendo la po
 generada; mientras que sqrt() devuelve la raíz cuadrada de un número. Si recuerda la ecuación
 que permite obtener las raíces de una ecuación cuadrática utilizan ambas operaciones.
 
-
+# 🟣 SEMANA 07
 
 
 
