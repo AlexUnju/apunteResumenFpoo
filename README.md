@@ -1804,4 +1804,230 @@ commit y para poder ver un gráfico ASCII mostrándonos nuestro historial de com
 
 # 🟠 SEMANA 07
 
+## CONCEPTO INTERFACES
+
+En las clases se definen operaciones. Estas operaciones se definen considerando el nombre de
+la clase, el nombre de la propia operación, los parámetros que reciben y su valor de retorno.
+Estos 3 últimos elementos constituyen “La firma de la operación”.
+El conjunto de todas las firmas definidas en una clase (y por consecuencia en el objeto) se
+denomina “Interfaz del objeto”. La interfaz de un objeto engloba al conjunto de solicitudes que
+se le puede enviar al objeto (Del libro
+Design Patterns: Elements of Reusable
+Object-Oriented Software).
+
+En criollo lo anterior indica: defina las operaciones disponibles en la clase. Bien…y ahora ¿Cómo
+pueden acceder a esas operaciones OTROS objetos?
+
+1) Hay que definir un mecanismo para que esas operaciones estén disponibles (lo que se
+denomina Interfaz del objeto).
+2) Esa interfaz del objeto es la propia semántica (el nombre del método) y firma de la
+operación (el conjunto de parámetros del método); es decir para acceder a la operación
+se debe hacer referencia al nombre de la operación, sus parámetros y tipo de retorno.
+3) La forma en que un objeto se comunica con la interfaz de otro objeto es a través del
+protocolo de mensajes, el cual según nuestro lenguaje de programación (Processing) se
+define como: nombreDelObjeto.nombreDelMétodo(parametros);
+
+## REALIZANDO UNA APROXIMACIÓN DESDE LA EXPERIENCIA DEL MODELADO
+
+En la programación orientada a objetos, a veces es útil definir **QUÉ** debe hacer una clase, pero
+no **CÓMO** lo hará. Para realizar lo anterior podemos recurrir a dos estructuras:
+
+1) Por un lado, las clases abstractas, las cuales vimos cómo se definen. Estas clases tienen
+la particularidad de que en ellas se pueden definir tanto operaciones “normales o
+concretas” como las denominadas operaciones abstractas. Al momento de llevar un
+diagrama de clases modelado a la etapa de programación, las operaciones concretas
+poseen implementación. Es decir, el desarrollador deberá codificar el algoritmo de esa
+operación. En cambio, las operaciones abstractas no poseen implementación. Esto
+significa que alguna subclase de la clase abstracta deberá proporcionar la
+implementación de las operaciones abstractas definidas en la superclase abstracta.
+En pocas palabras una clase abstracta puede poseer operaciones abstractas (aquellas
+en la que especifica la semántica y la firma, pero no su implementación)
+Un ejemplo clásico de la bibliografía es el siguiente
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/7fdd35c9-9c2e-4440-97e6-3ef14a7b4b7d)
+
+Tenemos una superclase abstracta. En esta clase se pueden definir atributos como en
+cualquier clase. También posee una operación concreta (mover()), que recibe dos
+parámetros para cambiar la posición de la figura en un espacio 2D. La operación
+**calcularSuperficie()** es abstracta. Resulta claro que no posee implementación
+porque sin saber el tipo de figura no es posible utilizar una “formula” para calcular esta
+operación. Se hace necesario definir subclases, y que cada una de ellas sobre escriba
+esta operación para establecer la implementación correcta.
+
+2) Si bien las clases y operaciones abstractas son útiles, es posible llevar este concepto un
+paso más allá. Tanto en UML como en los principales lenguajes de programación, es
+posible separar por completo la interfaz de una clase de su implementación, utilizando
+interfaces.
+
+¿Por qué querríamos hacer esto?
+
+Las interfaces sirven para representar “contratos”. Establecen que operaciones deberán
+implementar las clases que adhieran a este contrato. De esta manera, si una clase
+adhiere a este contrato, debe respetarlo, por ende, deberá implementar el código de
+todas las operaciones que están definidas en ese contrato.
+
+¿Y esto para que nos sirve?
+
+Separar la interfaz de su implementación en términos de ingeniería del software implica
+minimizar el acoplamiento y maximizar la cohesión. Para no entrar en detalles de estos
+dos conceptos, suponga que debe desarrollar una aplicación que ordena una lista de
+cualquier tipo objetos. Ud podría crear algo como esto:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/3c44e852-69c4-4620-8543-d1ea10faf323)
+
+Observe varias cosas:
+Por empezar se define una interface denominada Comparable. Toda clase que
+implemente esta interfaz establece un contrato por el cual esa clase debe tener
+implementado una operación **compareTo()** que compara ese objeto contra otro
+objeto, devolviendo un valor que indica el resultado de la comparación (por ejemplo
+podría ser: negativo, 0 o positivo si el objeto actual es menor, igual o mayor
+respectivamente al objeto comparado).
+Probablemente si Ud define una clase Persona no piense que deba poseer una
+operación **compareTo()** como algo común que se le pediría a una persona. Pero el
+contrato establece claramente que debe implementar esa operación. De allí la primera
+utilidad de una interface.
+
+En segundo lugar, si observa la clase OrdenacionBurbuja notará que posee un
+atributo que es una lista o un arreglo de objetos comparables, y además posee una
+operación **ordenarLista()**. Ud. podría agregar otra clase que ordene utilizando
+otra técnica de ordenación (por ejemplo, debido a un requisito no funcional, respecto
+del tiempo de respuesta del método de ordenación, es decir que se necesita un método
+más rápido de ordenación que el de burbuja) sin casi tocar todo el resto del modelo.
+También podría agregar nuevos mecanismos de comparación para la persona, lo cual
+agrega versatilidad; algo que no posee Factura, ya que solo posee un mecanismo de
+comparación, que sería por el monto. Todo gracias a la combinación del uso de
+interfaces y clases abstractas.
+En tercer lugar, aparece una nueva relación, que es la dependencia. La operación
+**compareTo()** no puede llevarse a cabo si no recibe por parámetro un objeto de tipo
+Object. Esta relación se utiliza para evitar que una clase deba tener un atributo de
+otra clase, así en este caso **Comparable** no está ligado a **Object** (no conoce a
+Object, o no tiene referencia a Object, o no apunta a **Object**). Además, como
+**Comparable** es una interfaz, por definición no posee atributos.
+
+## SOBRE LA DEFINICIÓN DEL CONTRATO
+
+En este contrato, la interfaz DEFINE:
+- Los nombres de las operaciones
+- Su tipo de retorno
+- El tipo y cantidad de parámetros que reciben las operaciones
+En este contrato, la interfaz NO DEFINE:
+- Implementaciones (en una interfaz todas las operaciones son abstractas)
+- Atributos
+Al igual que las clases abstractas, las interfaces no se pueden instanciar.
+Generalmente se las confunde con clases abstractas, aunque la diferencia principal reside en
+que para que una clase herede de otra abstracta debe seguir cumpliéndose la frase semántica
+**“es un tipo de”**, y además las operaciones que se definan tienen un sentido asociado al nombre
+de la clase; mientras que una clase puede implementar una o varias interfaces, simplemente con
+el objetivo de indicar el contrato de operaciones que debe cumplir.
+En adición a lo indicado en el párrafo anterior, mientras que la forma en que se lee la relación
+de una clase cualquiera con su clase abstracta es **“es un tipo de”**, en las interfaces la lectura es
+**“se comporta como”.**
+  
+Por último, hay que recordar que las interfaces no son clases
+
+## REPRESENTACIÓN EN UML
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/f810bf6e-6c3e-413c-ae86-94d31a77c160)
+
+Podemos notar varias cosas (que también están reflejadas en el primer ejemplo):
+- El estereotipo <<interface>> se antepone al nombre de la interfaz
+- Se suele denotar el nombre de la interfaz con la letra I, no siendo obligatorio, pero es
+comúnmente aceptado dentro del desarrollo de software. Sobre todo, entre los
+programadores.
+- El nombre de la operación está en cursiva para resaltar que es abstracto, aunque
+algunos autores no lo ponen, por cuanto se sobre entiende al estar definido dentro de
+una interface.
+- La relación es similar al de la generalización, pero la línea es punteada, y tiene por
+nombre realización o implementación.
+
+## OTRAS UTILIDADES DE LAS INTERFACES
+
+Dado que las interfaces permiten definir contratos únicamente sobre el comportamiento de las
+clases pueden resultar útiles para resolver de manera elegante problemas de diseño.
+Por ejemplo, suponga que crea un videojuego donde utilizará diferentes personajes que son
+animales. Suponga que utiliza aves como personajes, aquí sabe que todas las aves comen, pero
+no todas las aves vuelan, y justo uno de sus personajes es un pingüino. En términos de diseño,
+podrías decidir crear una clase abstracta Ave con el método comer() y luego crear una subclase
+AveVoladora y que esta posea el método volar(). Así por ejemplo un Halcon heredará de
+AveVoladora, mientras que Pingüino de Ave.
+Pero, si reflexiona un poco más, esta decisión se realiza sobre el comportamiento de las aves.
+Por lo cual una solución más elegante sería la siguiente:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/2eb7e92e-96bc-4797-9cdc-3bb5bf43bd89)
+
+Con esto establecemos un contrato únicamente con las aves que son voladoras, o dicho de otra
+manera que tienen comportamiento de voladoras.
+
+## CONCEPTO DE POLIMORFISMO
+## Introducción
+
+El polimorfismo es una propiedad del paradigma de objetos, en este caso la última que estamos
+estudiando (las anteriores fueron abstracción, encapsulación y la herencia). Esta propiedad permite
+trabajar de manera general, en lugar de trabajar de manera específica. Trabajar de manera general
+permite facilitar la tarea de escalabilidad de la aplicación orientada a objetos. La escalabilidad hace
+referencia a la posibilidad de poder ir aumentando la complejidad y los servicios que provee la
+aplicación.
+
+El tipo de polimorfismo que estudiaremos será el polimorfismo limitado. Este tipo de polimorfismo
+requiere de la presencia previa de la herencia simple. La herencia simple implica que una clase solo
+puede heredar a lo sumo de una única otra clase.
+Esta particularidad nos permitirá escribir programas que procesan objetos que compartan la misma
+superclase (ya sea de manera directa o indirecta [esto es usar interfaces]) como si todos fueran
+objetos de la superclase. Suponga que crea una aplicación que deba simular el movimiento de
+varios tipos de animales para un juego con vista desde arriba. En este tipo de juegos el movimiento
+será en dos dimensiones. Las clases Pez, Rana y Ave representan los tipos de animales que se
+están evaluando programar. 
+Además estas clases heredan de la clase Animal, la cual contiene una
+operación denominada mover() que a su vez devuelve la posición actual del animal luego de realizar
+el movimiento (esto es los valores x e y de una plano). Como puede imaginar cada tipo de animal
+se mueve de manera diferente, entonces lo más conveniente sería que cada uno de ellos sobre
+escriba la operación mover, lo cual en términos del diagrama de clases sería equivalente a
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/a45a10a7-5de5-4158-b2a7-7b264adaa692)
+
+Entonces podemos afirmar que no solamente se requiere la herencia simple, sino que además debe
+usarse la sobreescritura de las operaciones para poder aplicar el polimorfismo. Llegado a este
+punto, ¿qué es el polimorfismo?
+
+Suponga que el programa mantiene un arreglo de tipo Animal, donde cada una de las referencias
+de este tipo corresponden a alguna de las subclases. Entonces para simular el movimiento de cada
+animal, a cada elemento del arreglo se le envía el “mismo mensaje”, es decir se invoca la operación
+mover() del objeto de tipo Animal. Pero por la sobreescritura, el resultado al “mismo mensaje” 
+penderá de la implementación que se realizó en la operación realizada en cada clase en
+particular. Esta capacidad para responder a un mismo mensaje de manera diferente que poseen los
+objetos se denomina polimorfismo, específicamente polimorfismo limitado, el cual
+esquemáticamente para este ejemplo en particular estaría representado de la siguiente manera:
+
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/b8886815-99e9-4083-bd4c-031c83298f75)
+
+Con este esquema se puede confiar en que cada objeto sabrá como “hacer lo correcto” (es decir,
+lo apropiado para ese tipo de objeto) respecto de la manera en que debe realizar la operación
+mover() de manera independiente a los otros tipos de animales.
+En este esquema, observe que en este tipo de polimorfismo el efecto polimórfico es disparado por
+un método que recibe en dependencia un objeto de la superclase, desde el cual se invoca el método
+sobreescrito. Esto significa que para obtener el resultado de las “muchas formas diferentes” que
+adquiere un mismo mensaje (en este aso simularMovimeintoAnimal) la superclase debe ser
+instanciada por medio de alguna de sus subclases, ya que de no ser así sería imposible que se
+manifieste la sobreescritura.
+
+De manera formal, el polimorfismo es la propiedad del paradigma orientado a objetos que posibilita
+que un objeto responda de diferente manera a un mismo mensaje. Específicamente, el
+polimorfismo limitado es aquel en el que el comportamiento polimórfico se obtiene al instanciar
+un objeto de una clase a partir de una de sus subclases, de tal manera que la sobreescritura genera
+el efecto de una respuesta diferente al mismo mensaje.
+
+## Ventajas estructurales del polimorfismo
+
+Gracias a polimorfismo es posible extender con facilidad los requerimientos de la aplicación
+(escalabilidad): pueden agregarse nuevas clases con solo modificar un poco (o nada) las porciones
+generales del programa, siempre y cuando las nuevas clases sean parte de la jerarquía de herencia
+que el programa procesa en forma genérica.
+
+Observe los videos “La lógica del polimorfismo explicada con Minecraft y ”La mejor técnica para
+programar videojuegos sin perder el tiempo: polimorfismo. Luego realice en grupo la actividad
+solicitada.
+
+
+
 
