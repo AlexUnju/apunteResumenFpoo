@@ -1493,3 +1493,105 @@ de desarrollo y se promueve la reutilización de funcionalidad.
 Puede observar todos estos beneficios en acción en el video “programación de los beneficios de
 la sobrescritura”.
 
+### Clases abstractas
+
+Debido a la herencia se establecen relaciones jerárquicas entre clases. Puede suceder que una
+superclase sea tan genérica que no tenga sentido instanciarla. En estos casos, se asume que la
+superclase posee un alto nivel de abstracción, lo cual provocará que no sea posible definir
+algunos o todos sus atributos ya que corresponden a alguna de sus subclases. Misma situación
+puede llegar a presentarse en las operaciones de esa clase. En este tipo de situaciones es
+conveniente definir clases abstractas. Una clase abstracta es aquella que por definición no se
+puede instanciar. Desde el punto de vista conceptual una clase abstracta es aquella que no
+permite una clase que esté más alta en la jerarquía de relaciones, por lo tanto, no podrá heredar
+de otra clase definida por el desarrollador. Observe como se modela una clase abstracta en el
+diagrama de clases:
+
+Figura 5. Modelado de una clase abstracta
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/12e32ecf-2963-4940-b7b2-207251ca15d7)
+
+Suponga que se crea un objeto de la clase Figura que se observa en la figura 5 y luego se invoca
+la operación obtenerPerimetro().
+¿Cómo se determinaría cual de todas las posibles ecuaciones para obtener el perímetro de una
+figura se utilizaría?
+
+Estamos ante una situación en la cual el desarrollador no puede determinar la ecuación que
+debe programar para obtener su perímetro. Esto sucede porque Figura representa a todas las
+figuras geométricas, por lo cual crear un objeto de este tipo significaría cometer un error en el
+diseño del diagrama de clases.
+
+En estos casos lo que se espera es que se generen objetos de las subclases únicamente. En el
+ejemplo de la figura 5, esto representaría crear objetos de la clase Triangulo o Cuadrado, ya que
+para estos objetos está establecida la forma en que obtienen sus respectivos perímetros.
+
+Así, cuando no es posible crear un objeto de una clase, se dice que esa clase es abstracta. En
+un diagrama de clases una clase abstracta se identifica con el nombre de la clase en cursiva (tal
+como está representado en la figura 5, Figura es una clase abstracta).
+Observe además que en esta clase abstracta se ha definido una operación que también está en
+cursiva. ¿Será una operación abstracta? Exactamente esta operación es abstracta.
+
+
+#### ¿Qué es una operación abstracta? 
+
+Es una operación que únicamente define su interfaz, pero no
+su implementación. La interfaz de una operación incluye el nombre, la lista de parámetros y el
+tipo de retorno de una operación. La interfaz es lo que utiliza el protocolo de mensajes para
+poder invocar operaciones. La implementación de una operación es el algoritmo que ejecuta la
+acción de la operación. Entonces, esto significa que una operación abstracta no definirá su
+algoritmo.
+
+¿Entonces quien implementará ese algoritmo? Evidentemente lo implementarán sus subclases
+a través de la sobreescritura de las operaciones.
+
+Esto proporciona una manera elegante de diseñar clases y facilitar su programación ya que:
+
+1) Es posible indicar que una operación en la superclase no posee implementación (Por
+ejemplo, en Figura la operación obtenerPerimetro()).
+2) Cuando se define una operación abstracta SE OBLIGA a que las subclases sobreescriban
+esa operación y la implementen. Esto genera lo que se denomina un contrato entre la
+superclase y la subclase por la cual la superclase encomienda a la subclase a
+implementar la operación definida como abstracta.
+
+Nota importante: una clase abstracta no se puede instanciar, pero puede poseer operaciones
+comunes (no abstractas) y atributos
+
+## TIPOS DE HERENCIA
+
+La herencia es simple cuando una subclase hereda únicamente de una superclase. Por el
+contrario, una herencia es múltiple si la subclase hereda de varias 2 o más superclases.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/d6099472-3cd1-4fc5-883d-a009a215ea74)
+Figura 6. Tipos de Herencia
+
+En la figura 6 se puede observar que Class1 hereda únicamente de Class, por lo cual estamos
+ante una herencia simple. En cambio, Class2 hereda a la misma vez de Class y Class3, lo cual
+significa que estamos ante una herencia múltiple.
+
+## LA HERENCIA EN LOS VIDEOJUEGOS
+
+En el paradigma orientado a objetos, si bien es posible que el desarrollador cree clases donde
+se requiera la herencia, estas siempre convenientemente heredarán de **GameObject**. Esto se
+debe a que al menos dispondrán de un atributo que represente la posición del objeto y una
+operación para renderizarlo (dibujar, redibujar pintar o refrescar).
+
+Entonces sería conveniente crear una estructura similar a la siguiente:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/b4d67a74-7278-4758-8277-1ceae90d645e)
+Figura 7. Esquema general de modelado de GameObjects
+
+Como se puede observar, la figura 7 representa un esquema genérico donde todos los
+personajes del juego (MainCharacter y Enemie) así como sus recursos (PowerUp) son subclases
+de una clase abstracta (GameObject) que posee un atributo position y una operación abstracta
+(display()). Esta operación es sobrescrita por la implementación correspondiente a cada
+subclase, lo cual permitirá renderizar el objeto en virtud de su posición.
+
+Podría pensar en una jerarquía donde los gameobjects dinámicos puedan ser subclases
+GameObject e incorporen una operación move(). De esta clase a su vez heredarían
+MainCharacter y Enemie; mientras que PowerUp directamente heredaría de GameObject
+debido a que no se mueve.
+
+La complejidad de la jerarquía la definirá Ud. como diseñador. 
+
+
+
+
