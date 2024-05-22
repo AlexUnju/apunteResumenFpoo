@@ -1590,8 +1590,218 @@ GameObject e incorporen una operación move(). De esta clase a su vez heredaría
 MainCharacter y Enemie; mientras que PowerUp directamente heredaría de GameObject
 debido a que no se mueve.
 
-La complejidad de la jerarquía la definirá Ud. como diseñador. 
+La complejidad de la jerarquía la definirá Ud. como diseñador.
+
+## git
+## INTRODUCCIÓN
+En esta sección estudiaremos el funcionamiento de Git y diferentes criterios para realizar un
+correcto control de versiones.
+Git es un software de control de versiones diseñado por Linus Torvalds. Fue pensado para que
+el mantenimiento de versiones de aplicaciones (cuando tienen un gran número de archivos de
+código fuente) sea eficiente y confiable. Su propósito es llevar registro de los cambios en
+archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos
+compartidos.
+
+## ¿QUÉ ES UN SISTEMA DE CONTROL DE VERSIONES?
+
+Imaginemos que comenzamos un nuevo proyecto que consiste en solo un archivo fuente. Lo
+más probable es que se puedan deshacer los cambios que se hicieron durante esa jornada.
+Al día siguiente, se continúa con el desarrollo y se mejora el archivo, pero, en el intento, el
+programa comienza a presentar errores. Necesitamos volver a una versión anterior del
+proyecto, donde no existía el error. Sin embargo, al no contar con un Control de Versiones, no
+contamos con respaldo de las versiones previas.
+
+Se denomina Control de Versiones a la gestión de los diversos cambios que se realizan sobre los
+elementos de algún producto o una configuración de este. Una versión, revisión o edición de un
+producto, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo
+o modificación.
+
+## ¿QUE ES EL TRABAJO COLABORATIVO?
+
+Es un modelo de desarrollo basado en la disponibilidad pública del código y la comunicación vía
+Internet. Este modelo se hizo popular a raíz de su uso para el desarrollo de Linux en 1991.
+Tomando como contexto a Git, podríamos decir que el desarrollo colaborativo proporciona
+herramientas para que un gran número de individuos puedan hacer desarrollos en conjunto de
+una manera más fácil, menos propensa a errores y rápida de implementar.
+
+## ¿CÓMO FUNCIONA GIT?: El CONCEPTO DE GRAFO Y UNA BREVE DESCRIPCIÓN DE LA TEORIA DE GRAFOS
+
+Anteriormente se ha comentado que un software de VCS es una implementación de una
+especificación para realizar control de versiones. Existen diversas especificaciones. Una de ellas,
+concretamente la que adopta el software Git está basada en el concepto del grafo.
+
+En matemáticas y ciencias de la computación, un grafo (del griego grafos: dibujo, imagen) es un
+conjunto de objetos llamados vértices o nodos unidos por enlaces llamados aristas o arcos que
+permiten representar relaciones binarias entre elementos de un conjunto. Son el objeto de
+estudio de la Teoría de Grafos.
+
+Un grafo se representa gráficamente como un conjunto de puntos (vértices o nodos) unidos por
+líneas (aristas). Desde un punto de vista práctico, los grafos permiten estudiar las interrelaciones
+entre unidades que interactúan unas con otras.
+
+Por ejemplo: una red de computadoras puede representarse y estudiarse mediante un grafo, en
+el que los vértices representan terminales y las aristas representan conexiones (las cuales, a su
+vez, pueden ser cables o conexiones inalámbricas). 
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/98eb3851-2277-4cf8-add3-34f1ae7cc17e)
+
+Un grafo está compuesto por:
+
+- Aristas: son las líneas con las que se unen los vértices de un grafo.
+- Aristas adyacentes: 2 aristas son adyacentes si convergen en el mismo vértice.
+- Aristas paralelas: son dos aristas conjuntas si el vértice inicial y final son el mismo.
+- Arista cíclica: es la arista que parte de un vértice para entrar en sí mismo.
+- Cruce: son 2 aristas que cruzan en un mismo punto.
+- Vértices: son los elementos que forman un grafo. Cada uno lleva asociada una valencia
+característica según la situación, que se corresponde con la cantidad de aristas que
+confluyen en dicho vértice.
+- Camino: se denomina camino de un grafo a un conjunto de vértices interconectados por
+aristas. Dos vértices están conectados si hay un camino entre ellos
+
+**Git no piensa ni almacena sus datos de esta manera. Git considera sus datos como un conjunto
+de snapshots (instantáneas) de un mini sistema de archivos. Git maneja sus datos como una
+secuencia de copias instantáneas.**
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/e8929f7c-5055-45bb-abac-00547982e657)
+
+## ESTADOS Y SECCIONES DE UN REPOSITORIO GIT
+
+Esto es lo más importante que debes recordar acerca de Git si quieres que el resto de tu proceso
+de aprendizaje prosiga sin problemas. Git tiene tres estados principales en los que se pueden
+encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged).
+1) Confirmado (Commited): significa que los datos están almacenados de manera segura
+en tu base de datos local.
+2) Modificado (Modified): significa que has modificado el archivo pero todavía no lo has
+confirmado a tu base de datos.
+3) Preparado (Staged): significa que has marcado un archivo modificado en su versión
+actual para que vaya en tu próxima confirmación.
+
+Esto nos lleva a las tres secciones principales de un proyecto de Git: El directorio de Git (.git
+directory), el directorio de trabajo (working directory), y el área de preparación (staging area):
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/e89c15fa-5dbd-4791-b570-3d0f2bb835a0)
 
 
+El directorio de Git es donde se almacenan los metadatos y la base de datos de objetos para tu
+proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio
+desde otra computadora.
+El directorio de trabajo es una copia de una versión del proyecto. Estos archivos se obtienen de
+la base de datos comprimida en el directorio de Git (haciendo un Checkout the Project), y se
+colocan en disco para que los puedas usar o modificar.
+El área de preparación es un archivo, generalmente contenido en tu directorio de Git, que
+almacena información acerca de lo que va a ir en tu próxima confirmación. A veces se le
+denomina índice (“index”), pero se está convirtiendo en estándar el referirse a ella como el área
+de preparación.
+
+El flujo de trabajo básico en Git es algo así:
+1) Modificas una serie de archivos en tu directorio de trabajo.
+2) Preparas los archivos, añadiéndolos a tu área de preparación.
+3) Confirmas los cambios, lo que toma los archivos tal y como están en el área de
+preparación y almacena esa copia instantánea de manera permanente en tu directorio
+de Git.
+
+Lo anterior esquemáticamente se representa de la siguiente manera:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/25043140-1fc7-4f01-9fed-983416309f54)
+
+Donde se observa que el pasaje de un estado a otro se realiza a través de comandos de Git. De
+manera resumida para pasar del working directory al stagig area se utiliza el comando git add,
+mientras que para pasar de esta última área al .git directory hay que realizar un git commit.
+Si una versión concreta de un archivo está en el directorio de Git, se considera confirmada
+(committed). Si ha sufrido cambios desde que se obtuvo del repositorio, pero ha sido añadida al
+área de preparación, está preparada (staged). Y si ha sufrido cambios desde que se obtuvo del
+repositorio, pero no se ha preparado, está modificada (modified).
+
+## GIT STATUS
+Tomando como referencia el ejemplo de proyecto sobre el que se ha realizado el seguimiento
+mediante git init, podemos verificar que, aunque posee el archivo .pde que Processing crea
+dentro del directorio, este resultará desde el punto de vista de Git como un nuevo elemento
+dentro del proyecto. Esto lo comprobaremos al ingresar el siguiente comando.
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/80bf3907-5634-4f6f-84ee-fccac34d8109)
+
+El comando nos brinda mucha información:
+
+1) En primer lugar, nos indica que estamos parados en la Rama Principal, es decir el camino
+que por defecto Git realiza el seguimiento.
+2) En segundo lugar, nos indica que no hemos realizado ninguna confirmación (commit).
+Los commits permiten confirmar los cambios realizados cuando los pasamos desde el
+staging area al .git drectory o repositorio. En este ejemplo es natural, porque recién
+hemos creado el directorio.
+3) En tercer lugar, nos informa que ha detectado archivos que no se están siguiendo
+(untracked files). Es decir, se han creado nuevos archivos, o aquellos existentes
+presentan modificaciones con respecto a la versión almacenada en el directorio de git.
+Para este ejemplo, significa que HolaMundoProcessing.pde está en el estado (modified),
+o lo que es lo mismo se halla en el working directory. Esto se debe a que Git observa que
+hay un archivo en el working directory del cual no encuentra una versión anterior
+(instantánea o snapshot) en el .git directory. Por lo tanto, Git no lo va a incluir hasta
+que se lo indiquemos explícitamente.
+
+A su vez, brinda información sobre como poder colocar este cambio en el staging area mediante
+el comando git add. Esquemáticamente podemos visualizar esta situación de la siguiente
+manera:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/54797494-1d46-47b7-b182-5ca61822c66f)
+
+## GIT ADD
+
+Se utiliza para comenzar a rastrear un archivo; por ejemplo puedes ejecutar lo siguiente:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/b9f7f736-35d9-4fdd-871c-0f83488d49bc)
+
+Puede observar, además, que luego de ejecutar el comando, una nueva consulta de estados nos
+informa que existen cambios a ser confirmados. Específicamente el cambio radica en que existe
+un nuevo archivo a seguir (new file: HolaMundoProcessing.pde).
+Esto significa que el comando add ha cambiado el estado del archivo, pasándolo de modified a
+staged:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/15caa9f9-9575-4b05-be3f-4e44a5b2ad3e)
+
+El comando git add puede recibir tanto una ruta de archivo como de un directorio; si es de un
+directorio, el comando añade recursivamente los archivos que están dentro de él.
+Si generamos un commit en este punto, la versión del archivo en el momento en que hayamos
+ejecutado el comando git add va a permanecer en el snapshot histórico anterior.
+Pero si modificamos y guardamos los cambios del archivo.
+
+## GIT COMMIT
+
+Una vez que el/los archivos/directorios se encuentran en el área de preparación (staging area),
+estamos listos para confirmar los cambios ejecutando un commit de la siguiente manera:
+
+Sin embargo, vamos a recomendar que se realice un commit con definición de un mensaje, para
+lo cual se utiliza la opción -m. Para nuestro ejemplo, usaremos lo siguiente:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/147f4d5a-62e2-4f42-829e-2457243e97b5)
+
+Como puede notar se genera una respuesta que indica que se ha agregado al archivo 5 nuevas
+líneas y que se han confirmado los cambios.
+Específicamente nos brinda información acerca de:
+- La rama (branch) donde confirmamos los cambios (main)
+- El identificador SHA-1 del commit (6180c2c)
+- Cuántos archivos fueron modificados
+- Estadísticas acerca de las líneas que fueron insertadas o removidas en el commit.
+Cada vez que hagamos un commit estaremos generando una nueva versión del proyecto, o
+snapshot, la cual podemos revertir o comparar luego.
+
+## GIT LOG
+
+Antes de continuar viendo otras opciones de git commit, resulta conveniente estudiar el
+comando git log. Luego de haber creado varios commits, o mismo si hemos clonado un
+repositorio con un historial de commits existente, probablemente queramos mirar hacia atrás
+para ver qué ha pasado en el repositorio. Con el comando git log logramos esto:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/e94e0015-4965-443a-a656-eebb2c954664)
+
+Por defecto, sin parámetros, git log lista los commits hechos en un repositorio en orden
+cronológico inverso; esto es, el commit más reciente se verá primero. Como podemos ver, este
+comando enumera cada commit con su identificador SHA-1, el nombre de autor e email, la fecha
+de escritura y el mensaje del commit. 
+
+Este comando viene con muchos atajos y parámetros que podemos agregar para que la salida
+en la línea de comandos no sea tan abundante. Particularmente las opciones de --oneline y --
+graph son sumamente útiles respectivamente, para mostrar información abreviada sobre cada
+commit y para poder ver un gráfico ASCII mostrándonos nuestro historial de commits:
+
+# 🟠 SEMANA 07
 
 
