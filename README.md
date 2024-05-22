@@ -1337,5 +1337,159 @@ que permite obtener las raíces de una ecuación cuadrática utilizan ambas oper
 
 # 🟣 SEMANA 06
 
+# INTRODUCCIÓN
+La herencia es una propiedad específica del paradigma orientado a objetos. Este pilar constituye
+también una relación entre clases. Una relación permite establecer como interactúan las clases.
+En el caso de la herencia esta relación establece que una clase declara a otra clase como su
+principal, también se dice que una clase (denominada subclase) declara a otra como su
+superclase. Esta declaración se denomina herencia porque la subclase adquiere en forma
+automática los atributos y operaciones de la superclase. De esta forma la subclase además de
+los atributos y operaciones que posee adquiere los atributos y operaciones de la superclase. El
+objetivo de este apunte será describir las implicancias de utilizar esta propiedad y su forma de
+modelado en UML.
 
+## REPRESENTACIÓN EN EL DIAGRAMA DE CLASES
+
+En el diagrama de clases de UML la herencia posee un elemento de relación propio basado en
+una flecha que une la superclase con sus subclases. Sea el siguiente ejemplo
+Figura 1. Ejemplo de herencia y tipos de vista de una herencia
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/920cb973-9a1e-4b8c-aaef-1ca25d7b17eb)
+
+Observe que se ha definido la clase Persona, la cual posee 3 atributos y una operación. Luego se
+han definido las clases Profesor y Estudiante. En principio la clase Profesor posee 2 atributos y 1
+operación, mientras que la clase Estudiante posee 1 atributo y ninguna operación.
+Sin embargo, la flecha que sale de cada una de estas clases hacia la clase Persona, indica que se
+está estableciendo una relación de herencia: La clase Persona se convierte en una superclase,
+mientras que Profesor y Estudiante se convierten en subclases. Como consecuencia, ahora
+Profesor posee 5 atributos y 3 operaciones, mientras que Estudiante posee 4 atributos y una
+operación.
+
+La forma de la punta de la flecha de la relación de herencia es muy clara: un triángulo sin relleno
+que siempre apunta a la superclase.
+
+## VISTAS DE UNA RELACIÓN DE HERENCIA
+Observe nuevamente la Figura 1. En ella se describe que existen dos formas de interpretar la
+relación de herencia dependiendo del punto de vista desde el cual se analice la relación. Si se
+parte desde la superclase hacia las subclases, la relación de herencia describe un proceso de
+especialización: esto significa que cada una de las subclases pueden definir atributos y
+operaciones que no son comunes entre ellas. Esto permite que cada una de estas subclases 
+pueda brindar con mayor detalle sus propias características (atributos) y responsabilidades
+(operaciones).
+Si, por el contrario, analizamos la relación de herencia desde las subclases hacia la superclase,
+estaremos en presencia de un proceso de generalización. Esto es, en la superclase se definirán
+los atributos y operaciones que son comunes o “genéricos” a todas las subclases. El proceso de
+generalización-especialización de la relación de herencia debería poder brindarle un punto de
+referencia para determinar si existe esta relación entre dos clases
+
+## VALIDACIÓN DEL MODELADO DE UNA RELACIÓN DE HERENCIA
+En la figura 2, se intenta establecer una relación de herencia entre la clase Casa y la clase Mueble,
+donde la primera se convierte en la superclase y la segunda en la subclase. Se ha relacionado
+dos clases indicando que Casa es la superclase de Mueble. Si realizamos un análisis del proceso
+de generalización – especialización, propuesto para estas clases, podemos detectar que
+aparentemente la aplicación de la relación no tiene sentido: un mueble no hereda las cantidades
+de habitaciones de una casa, esto es: un mueble no posee como atributo genérico la cantidad
+de habitaciones.
+Figura 2. Una relación de herencia inválida
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/35781299-5112-402f-a0c8-0c772b3d7dde)
+
+Esto significa que al momento de decidir establecer una relación de herencia entre dos clases se
+debe verificar que la misma sea correcta.
+
+## Frase semantica de la herencia
+
+Para ello existe una frase que permite verificar si la relación de herencia que se desea establecer
+es correcta. Esta frase se denomina Frase Semántica y en el caso de la herencia es:
+
+`¿<<La subclase>> es un tipo de/es un/es una <<La superclase>>?`
+
+Si la respuesta es afirmativa entonces es correcto establecer la relación de herencia, caso
+contrario no se debe establecer la relación de herencia.
+En el ejemplo de la figura 2 la frase semántica se aplicaría de la siguiente manera: ¿El mueble es
+un tipo de Casa? o ¿El mueble es una casa? Evidentemente la respuesta es NO. Las casas poseen
+muebles, pero los muebles no son casas.
+
+De la misma manera para el ejemplo de la figura 1 se puede verificar:
+- ¿Un profesor es un tipo de Persona? La respuesta es SI, por lo tanto, fue correcto
+establecer la herencia entre ambos
+- ¿Un estudiante es un tipo de Persona? En este caso también es correcta la afirmación.
+
+## CONSECUENCIAS DE LA APLICACIÓN DE LA HERENCIA
+La herencia conlleva un conjunto de efectos secundarios que se deben tener en cuenta cuando
+se decide aplicarla en un modelado de clases.
+
+### Redefinir la visibilidad de los atributos de la superclase
+Observe nuevamente la figura 1. Como se había mencionado anteriormente la clase Profesor
+hereda 3 atributos de la clase Persona. Sería razonable pensar que la subclase debería poder
+manipular directamente esos atributos heredados, como si se hubieran definido dentro de la
+misma clase Profesor. Pero esto no sucede. Si bien se creará un único objeto con todos los
+atributos y operaciones definidos en Profesor y Persona, las clases diseñadas son diferentes, con
+una relación definida pero diferentes al final de cuentas.
+
+Recuerde que la visibilidad privada de los atributos y operaciones (-) indica que ninguna clase
+externa puede acceder a esos atributos y operaciones. Por este motivo tanto en UML como en
+los lenguajes de programación se ha definido el modificador de acceso protected (protegido o
+#) que mantiene la imposibilidad de manipulación de atributos y operaciones de una clase a toda
+clase ajena, salvo que sea una subclase. Por lo tanto, en realidad la Figura 1 debería tener la
+siguiente forma
+
+Figura 3. Herencia con atributos de la superclase con visibilidad protegida
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/b237c1c6-1be1-4443-a68a-ac3f2f6e190c)
+
+
+### La sobreescritura
+Es aquella situación donde una misma operación se define tanto en la superclase como en la
+subclase. Por ejemplo:
+
+![image](https://github.com/AlexUnju/apunteResumenFpoo/assets/142057928/eaab96bc-ea6d-47aa-9b0b-74cc58521ce4)
+
+Observe que TrianguloIsosceles posee 2 operaciones con el mismo nombre y la misma lista de
+parámetros, por lo cual no es una sobrecarga de operaciones.
+Formalmente se dice que ambas operaciones tienen la misma semántica (nombre de la
+operación) y la misma firma (lista de parámetros de la operación). Este es el único caso en el
+cual los lenguajes de programación permiten que un objeto posea dos operaciones iguales.
+¿Porque se permite esta situación? En primer lugar, porque no se puede romper la característica
+principal de una herencia: la subclase hereda los atributos y operaciones de la superclase.
+En segundo lugar, si bien tenemos dos clases diferentes, por la relación de herencia, la
+instanciación genera un único objeto. Es decir, cuando un lenguaje de programación crea un
+objeto de TrianguloIsosceles, el mismo poseerá 3 atributos y 2 operaciones.
+Ante esta situación cabe la pregunta: Si se invoca la operación getPerimetro() ¿Cuál de las dos
+operaciones que posee se ejecutará?
+Por defecto los lenguajes de programación asumirán que la operación que se ha definido en la
+subclase es una “especificación” de la definida en la superclase, por lo tanto, al poseer mayores
+detalles la lógica indica que se debe ejecutar, obviando de esta manera, la operación definida
+en la superclase. Este proceso se conoce como sobreescritura. Esto significa que existen ambas
+operaciones en la subclase pero que al momento de invocar el nombre de la operación se
+ejecutará la de la subclase, porque sobre escribe o redefine la de la superclase; dando el efecto
+o impresión de que la subclase solo posee el método definido en la subclase.
+
+Formalmente los lenguajes de programación seguirán los siguientes criterios coherentes con la
+definición de herencia y sus procesos de especialización y generalización:
+
+- Si se crean objetos de la subclase, la operación que se ejecutará será la definida en la
+subclase, ya que el proceso de especialización asume que esta operación redefine o
+sobreescribe la de la superclase.
+
+- Si se crean objetos de la superclase, la operación que se ejecutará será la definida en
+esta, ya que el concepto de generalización supone que la superclase no conoce los
+atributos y operaciones de las subclases. En esto caso no se aplica la sobreescritura.
+La sobre escritura supone un conjunto de beneficios:
+
+- Es posible crear una nueva forma de ejecutar una operación sin necesidad de
+modificarla o eliminarla. Se redefine su funcionamiento en la subclase sin afectar la
+existente en la superclase. Esto facilita el mantenimiento del código. Lo único que se
+debe hacer es cambiar la instanciación de la superclase por la de la subclase.
+
+- Dado que la subclase hereda todos los atributos y operaciones de la superclase, no
+debería ocurrir ningún error de integración de la subclase en el sistema, logrando de
+esta manera mantener la integridad del sistema a la vez que se optimiza la funcionalidad
+(y obviamente se podría agregar nueva funcionalidad en la subclase).
+
+- Las operaciones redefinidas en una subclase pueden invocar la funcionalidad de la
+operación sobrescrita definida en la superclase. Es común que la propia operación de la
+subclase reutilice la funcionalidad de la operación sobrescrita en superclase para luego
+agregar una funcionalidad específica, con lo cual se estima que se disminuye el tiempo
+de desarrollo y se promueve la reutilización de funcionalidad.
+
+Puede observar todos estos beneficios en acción en el video “programación de los beneficios de
+la sobrescritura”.
 
